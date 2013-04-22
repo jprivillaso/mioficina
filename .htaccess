@@ -1,0 +1,4 @@
+RewriteEngine on
+
+RewriteRule ^@(.+)/(.+)$ /app-front-end/application/$2/
+RewriteRule ^@(.+)$ /app-front-end/office.php?nickOffice=$1 [L]

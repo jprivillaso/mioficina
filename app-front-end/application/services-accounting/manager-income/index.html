@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <!--<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />-->
+        <link type="text/css" rel="stylesheet" href="http://mioficina.co/app-front-end/resources/pluggins/jquery-iu-1.8.18/css/custom-theme/jquery-ui-1.8.18.custom.css" />
+        <link type="text/css" rel="stylesheet" href="http://mioficina.co/app-front-end/global/style-services.css" />
+        <link type="text/css" rel="stylesheet" href="http://mioficina.co/app-front-end/application/services-accounting/manager-income/style/style.css" />
+        <script src="http://mioficina.co/app-front-end/resources/pluggins/jquery-iu-1.8.18/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="http://mioficina.co/app-front-end/resources/global/global_functions.js" type="text/javascript"></script>
+        <script src="http://mioficina.co/app-front-end/application/services-accounting/manager-income/controller/controller.js" type="text/javascript"></script>
+        <script src="http://mioficina.co/app-front-end/resources/pluggins/jquery-iu-1.8.18/development-bundle/ui/jquery.ui.core.js"></script>
+	<script src="http://mioficina.co/app-front-end/resources/pluggins/jquery-iu-1.8.18/development-bundle/ui/jquery.ui.widget.js"></script>
+	<script src="http://mioficina.co/app-front-end/resources/pluggins/jquery-iu-1.8.18/development-bundle/ui/jquery.ui.datepicker.js"></script>
+        <script src="http://mioficina.co/app-front-end/resources/pluggins/jquery-iu-1.8.18/development-bundle/ui/i18n/jquery.ui.datepicker-es.js"></script>
+        <script src="http://mioficina.co/app-front-end/resources/pluggins/alphanumeric/jquery.alphanumeric.pack.js" type="text/javascript"></script>
+        <script src="http://mioficina.co/app-front-end/resources/pluggins/validate/jquery.validate.pack.js" type="text/javascript"></script>
+        <script src="http://mioficina.co/app-front-end/resources/pluggins/accounting/accounting.js" type="text/javascript"></script>
+        <title>Mi Oficina.Co - Ingresos</title>
+        <script type="text/javascript">
+            $(function() {
+                $(".datepicker").datepicker();
+                $(".datepicker").datepicker( $.datepicker.regional[ "es" ] );
+                $(".datepicker").datepicker("option", "dateFormat", "yy-mm-dd");
+            });
+        </script>
+    </head>
+    <body>
+        
+        <div id="container-service-body">
+            
+            <div id="container-service">
+                <header id="service">
+                    <div id="titlebar">
+                        <div id="logo"><img src="http://mioficina.co/app-front-end/resources/multimedia/iconos/white/home.png" /></div>
+                        <div id="title">Gestión de Ingresos</div>
+                    </div>
+                    <div id="path"><a href="#">Modulo Contable</a> >> <a href="#">Gesti&oacute;n de Ingresos</a></div>
+                </header>
+                <article>
+                    <div id="content-service">
+                        <section id="info"><p></p></section>
+                        <section id="barSearchIncome">
+                            <section id="titleBarSearch"><p>Filtar Ingresos</p></section>
+                            <section id="boxSearch">
+                                <p id="lblByDate">Por Periodo</p>
+                                <p id="lblInitDate">Desde:</p>
+                                <input class="datepicker" type="text" id="datepickerInit"/>
+                                <p id="lblFinDate">Hasta:</p>
+                                <input class="datepicker" type="text" id="datepickerFin"/>
+                                <p id="lblByConcept">Por Concepto</p>                                
+                                <select id="sltTypeConceptSearch">
+                                    <!-- list concepts -->
+                                </select>
+                                <div id="buttonSearchIncome"><img src="http://mioficina.co/app-front-end/resources/multimedia/iconos/blue/search.png" /></div>
+                            </section>
+                        </section>
+                        <section id="addIncome">
+                            <img id="buttonAddIncome" src="http://mioficina.co/app-front-end/resources/multimedia/iconos/blue/add-item.png" />
+                        </section>
+                        <section id="gridIncomes">
+                            <section id="tableGridIncomes">
+                                <section id="menuGridIncomes">
+                                    <div style="width:50px;"><p>N&uacute;mero</p></div>
+                                    <div style="width:100px;"><p>Concepto</p></div>
+                                    <div style="width:80px;"><p>Fecha</p></div>
+                                    <div style="width:90px;"><p>Valor</p></div>
+                                    <div style="width:60px;"><p>Tipo</p></div>
+                                    <div style="width:100px;"><p>Realizado Por</p></div>
+                                    <div style="width:120px;"><p>Descripci&oacute;n</p></div>
+                                </section>
+                                <section id="listItemsGrid"><!-- list users --></section>
+                            </section>
+                            <section id="pagination">
+                                <section id="list-pagination"></section>
+                            </section>
+                        </section>
+                    </div>
+                </article>
+                <footer id="footer-service">
+                    <p>Para más información contáctenos al correo soporte@mioficina.co</p>
+                </footer>
+            </div>
+        </div>
+        
+        
+        <!-- dialog add income -->
+        <div class="dialog" id-dialog="dlg-addIncome">
+            <div id="dlgAddIncome">
+                <div class="titleDialog"><p>Agregar Ingreso</p></div>
+                    <!-- { -->
+                    <!--<section id="infoDialogAdd"><p></p></section>-->
+                    <section id="formAddIncome">
+                           <div id="frm-labelsAdd">
+                                <div><p id="lblAddTypeConceptIncome">Concepto</p></div>
+                                <div><p id="lblAddDateIncome">Fecha</p></div>
+                                <div><p id="lblAddValueIncome">Valor</p></div>
+                                <div><p id="lblAddFormatedValueIncome">--</p></div>
+                                <div><p id="lblAddPayTypeIncome">Tipo de Pago</p></div>
+                                <div><p id="lblAddFromIncome">Realizado Por</p></div>
+                                <div><p id="lblAddDescriptionIncome">Descripc&oacute;n</p></div>
+                            </div>
+                            <div id="frm-fieldsAdd">
+                                <div id="addFiedlTypeConceptIncome"><select id="sltAddTypeConceptIncome"></select></div>
+                                <div id="addFiedlDateIncome"><input class="datepicker" type="text" value="" id="txtAddDateIncome" /></div>
+                                <div id="addFiedlValueIncome"><input type="text" value="" id="txtAddValueIncome" /></div>
+                                <div id="addFiedlPayTypeIncome">
+                                    <select id="sltAddPayTypeIncome">
+                                        <option value="1">Efectivo</option>
+                                        <option value="2">Banco</option>
+                                    </select>
+                                </div>
+                                <div id="addFiedlFromIncome"><input type="text" value="" id="txtAddFromIncome" /></div>
+                                <div id="addFiedlDescriptionIncome"><input type="text" value="" id="txtAddDescriptionIncome" /></div>
+                            </div>
+                            <div class="btnActionDilog"><div id="btn-saveAddIncome"><div class="content-buttonDialogs"><img src="http://mioficina.co/app-front-end/resources/multimedia/iconos/white/save.png" /><p>Agregar Ingreso</p></div></div></div>
+                        </section>
+                    </section>
+                    <!-- } -->
+                <div id="btn-closeDialogAddIncome" class="btn-closeDialog"></div>
+            </div>
+        </div>
+        <!-- end dialog add concept -->
+        
+        
+        <!-- dialog add concept -->
+        <div class="dialog" id-dialog="dlg-editIncome">
+            <div id="dlgEditIncome">
+                <div class="titleDialog"><p>Editar Ingreso</p></div>
+                    <!-- { -->
+                    <section id="infoDialogEdit"><p></p></section>
+                    <section id="formEditIncome">
+                           <div id="frm-labelsEdit">
+                                <div><p id="lblEditTypeConceptIncome">Concepto</p></div>
+                                <div><p id="lblEditDateIncome">Fecha</p></div>
+                                <div><p id="lblEditValueIncome">Valor</p></div>
+                                <div><p id="lblEditFormatedValueIncome">--</p></div>
+                                <div><p id="lblEditPayTypeIncome">Tipo de Pago</p></div>
+                                <div><p id="lblEditFromIncome">Realizado Por</p></div>
+                                <div><p id="lblEditDescriptionIncome">Descripc&oacute;n</p></div>
+                            </div>
+                            <div id="frm-fieldsEdit">
+                                <div id="editFiedlTypeConceptIncome"><select id="sltEditTypeConceptIncome"></select></div>
+                                <div id="editFiedlDateIncome"><input class="datepicker" type="text" value="" id="txtEditDateIncome" /></div>
+                                <div id="editFiedlValueIncome"><input type="text" value="" id="txtEditValueIncome" /></div>
+                                <div id="editFiedlPayTypeIncome">
+                                    <select id="sltEditPayTypeIncome"></select>
+                                </div>
+                                <div id="editFiedlFromIncome"><input type="text" value="" id="txtEditFromIncome" /></div>
+                                <div id="editFiedlDescriptionIncome"><input type="text" value="" id="txtEditDescriptionIncome" /></div>
+                            </div>
+                            <div class="btnActionDilog"><div id="btn-saveEditIncome"><div class="content-buttonDialogs"><img src="http://mioficina.co/app-front-end/resources/multimedia/iconos/white/save.png" /><p>Editar Ingreso</p></div></div></div>
+                        </section>
+                    </section>
+                    <!-- } -->
+                <div id="btn-closeDialogEditIncome" class="btn-closeDialog"></div>
+            </div>
+        </div>
+        <!-- end dialog add concept -->
+        
+        
+        <!-- dialog add office -->
+        <div class="dialog" id-dialog="dlg-deleteIncome">
+            <div id="dlgDeleteIncome">
+                <div class="titleDialog"><p>Eliminar Ingreso</p></div>
+                    <section>
+                        <div id="textDeleteDialog"><p>Esta Seguro de eliminar el ingreso?</p></div>
+                        <div class="btnActionDilog"><div id-button-income-delete="" id="btn-deleteIncome"><div class="content-buttonDialogs"><img src="http://mioficina.co/app-front-end/resources/multimedia/iconos/white/delete-item.png" /><p>Eliminar Ingreso</p></div></div></div>
+                    </section>
+                    <!-- } -->
+                <div id="btn-closeDialogDeteleIncome" class="btn-closeDialog"></div>
+            </div>
+        </div>
+        <!-- end dialog add office -->
+        
+        
+        <div class="loadingProcess" id-dialog="processing">
+            <div id="processLoadingContent">
+                <div id="imgLoadingProccess">
+                    <img src="http://mioficina.co/app-front-end/resources/multimedia/gifs/ajax-loader-blue.gif" />
+                </div>
+                <div id="lblLoadingProccess">Procesando...</div>
+            </div>
+        </div>
+            
+    </body>
+</html>

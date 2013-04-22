@@ -1,0 +1,539 @@
+/* 
+    Document   : style
+    Created on : 18/06/2012, 02:28:27 PM
+    Author     : mioficina.co
+    Description:
+        styles for manager Suppliers
+*/
+
+root { 
+    display: block;
+}
+
+#tableGridSuppliers{
+    position: relative;
+    width: 96%;
+    left: 2%;
+    height: 400px;
+    margin-bottom: 5px;
+}
+
+#menuGridSuppliers{
+    position: relative;
+    height: 34px;
+    width: 100%;
+    border-bottom: 1px solid #E2EDF2;
+}
+
+#menuGridSuppliers div{
+    border-left: 1px solid #ffffff;
+    float: left;
+    height: 100%;
+    background-color: #0085B2;
+}
+
+#menuGridSuppliers div p{
+    margin-top: 7px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#pagination{
+    position: relative;
+    border-top: 1px solid #0092ef;
+    height: 30px;
+    width: 96%;
+    left: 2%;
+}
+
+#pagination #list-pagination{
+    margin-left: 100px;
+}
+
+.class-pagination-on{
+    position: relative;
+    border: 1px solid #0085B2;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top:2px;
+    margin-left: 2px;
+    background: #0092ef;
+}
+.class-pagination-on p{
+    text-align: center;
+    margin-top: 2px;
+    color: #ffffff;
+}
+
+.class-pagination-off{
+    position: relative;
+    border: 1px solid #0085B2;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top:2px;
+    margin-left: 2px;
+    background: #0092ef;
+    cursor: pointer;
+}
+.class-pagination-off p{
+    text-align: center;
+    margin-top: 2px;
+    color: #ffffff;
+}
+
+.eachSupplierGrid{
+    position: relative;
+    float: none;
+    width: 100%;
+    height: 30px;
+    border: 1px solid #E2EDF2;
+}
+
+.eachSupplierGrid div{
+    border-left: 1px solid #E2EDF2;
+    float: left;
+    height: 100%;
+}
+.eachSupplierGrid div p{
+    text-align: center;
+    margin-top: 4px;
+}
+
+.eachSupplierGrid div p img{
+    margin-top: -4px;
+    cursor: pointer;
+}
+
+#info{
+    position: relative;
+    height: 30px;
+    width: 60%;
+    left: 5%;
+}
+
+#info p{
+    color: red;
+    margin-top: 10px;
+}
+
+.dialog{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 20;
+    background-color: rgba(255,255,255, 0.9);
+    top: 0px;
+    left: 0px;
+}
+
+.dialog .btn-closeDialog{
+    position: absolute;
+    cursor: pointer;
+    right: 6px;
+    bottom: 6px;
+    background: url('http://mioficina.co/app-front-end/resources/multimedia/images/controls-close.png');
+    background-position: top center;
+    width: 25px;
+    height: 25px;
+}
+
+.dialog .btn-closeDialog:hover{
+    background: url('http://mioficina.co/app-front-end/resources/multimedia/images/controls-close.png');
+    background-position: bottom center;
+}
+
+.dialog .btn-closeDialog p{
+    color: #F90;
+    font-size: 1.1em;
+}
+
+#infoDialog{
+    position: absolute;
+    top:5px;
+    height: 40px;
+    width: 90%;
+    left:5%;
+}
+
+#infoDialog p{
+    margin-top: 10px;
+    color:red;
+}
+
+
+.dialog .titleDialog{
+    position: absolute;
+    width: 90%;
+    top: 5px;
+    height: 30px;
+}
+
+.dialog .titleDialog p{
+    color: #0085B2;
+    text-align: center;
+    font-size: 1.35em;
+    font-weight: bold;
+}
+
+.btnActionDilog{
+    position: absolute;
+    width: 100%;
+}
+
+/** bar search type Supplier **/
+#barSearchSupplier{
+    width: 90%;
+    border: 1px solid #0085B2;
+    height: 50px;
+    margin-left: 5%;
+    margin-bottom: 10px;
+}
+
+#titleBarSearch{
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+    background: #0085B2;
+}
+#titleBarSearch p{
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+
+#sltTypeSupplier{
+    width: 160px;
+    margin: 10px 20px;
+}
+
+
+/*** bar add item **/
+#addSupplier{
+    position: relative;
+    height: 30px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#addSupplier img{
+    float: right;
+    cursor: pointer;
+}
+/*** bar add item **/
+
+
+/** edit Supplier **/
+#dlgEditSupplier{
+    position: absolute;
+    padding:10px;
+    background: #ffffff;
+    top: 50px;
+    left: 12%;
+    width: 76%;
+    height: 290px;
+    border: 2px solid #ccccff;
+}
+
+#formEditSupplier{
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    border: 1px solid #E2EDF2;
+    top: 30px;
+}
+
+#formEditSupplier #frm-labelsEdit{
+    position: absolute;
+    left: 10px;
+    width: 110px;
+    height: 140px;
+    top: 10px;
+}
+
+#formEditSupplier #frm-labelsEdit p{
+    position: absolute;
+    text-align: right;
+    font-weight: bold;
+    width: 100%;
+}
+
+#formEditSupplier #frm-fieldsEdit{
+    position: absolute;
+    left: 130px;
+    width: 350px;
+    height: 140px;
+    top: 10px;
+}
+
+#formEditSupplier #frm-fieldsEdit div{
+    position: absolute;
+    width: 100%;
+}
+
+#formEditSupplier #frm-fieldsEdit div input{
+    padding: 2px;
+}
+
+#formEditSupplier #frm-fieldsEdit div select{
+    padding: 2px;
+}
+
+#lblEditName{
+    top: 25px;
+}
+#lblEditID{
+    top: 55px;
+}
+#lblEditNit{
+    top: 85px;
+}
+#lblEditPhone{
+    top: 115px;
+}
+#lblEditAddress{
+    top: 145px;
+}
+#lblEditEmail{
+    top: 175px;
+}
+
+#editFiedlName{
+    top: 22px;
+}
+#editFiedlID{
+    top: 52px;
+}
+#editFiedlNit{
+    top: 82px;
+}
+#editFiedlPhone{
+    top: 112px;
+}
+#editFiedlAddress{
+    top: 142px;
+}
+#editFiedlEmail{
+    top: 172px;
+}
+
+#formEditSupplier #btn-saveEditSupplier{
+    position: absolute;
+    top: 220px;
+    width: 80%;
+    left: 10%;
+    height: 30px;
+    background: #1c94c4;
+    cursor: pointer;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+#formEditSupplier #btn-saveEditSupplier .content-buttonDialogs{
+    position: absolute;
+    width: 50%;
+    left: 35%;
+}
+
+#formEditSupplier #btn-saveEditSupplier .content-buttonDialogs img{
+    float: left;
+}
+
+#formEditSupplier #btn-saveEditSupplier .content-buttonDialogs p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.32em;
+    font-weight: bold;
+    color: #ffffff;
+    left: 30px;
+    float: left;
+}
+
+#formEditSupplier #btn-saveEditSupplier:hover{
+    cursor: pointer;
+    background: #0092ef;
+}
+
+/*** dialog add Supplier ***/
+
+#dlgAddSupplier{
+    position: absolute;
+    padding:10px;
+    background: #ffffff;
+    top: 50px;
+    left: 12%;
+    width: 76%;
+    height: 280px;
+    border: 2px solid #ccccff;
+}
+
+#infoDialogAdd{
+    position: absolute;
+    width: 90%;
+    left: 10%;
+    top: 130px;
+    height: 20px;
+}
+
+#infoDialogAdd p{
+    color: #ff3333;
+}
+
+#infoDlgAddSupplier{
+    position: absolute;
+    top: 10px;
+    left: 330px;
+}
+#infoDlgAddSupplier p{
+    color: #ff3333;
+}
+
+#formAddSupplier #frm-labelsAdd{
+    position: absolute;
+    left: 10px;
+    width: 110px;
+    height: 330px;
+    top: 10px;
+}
+
+#formAddSupplier #frm-labelsAdd p{
+    position: absolute;
+    text-align: right;
+    font-weight: bold;
+    width: 100%;
+}
+
+#lblAddName{
+    top: 25px;
+}
+#lblAddID{
+    top: 55px;
+}
+#lblAddNit{
+    top: 85px;
+}
+#lblAddPhone{
+    top: 115px;
+}
+#lblAddAddress{
+    top: 145px;
+}
+#lblAddEmail{
+    top: 175px;
+}
+
+#formAddSupplier #frm-fieldsAdd{
+    position: absolute;
+    left: 130px;
+    width: 350px;
+    height: 330px;
+    top: 10px;
+}
+
+#formAddSupplier #frm-fieldsAdd div{
+    position: absolute;
+    width: 100%;
+}
+
+#formAddSupplier #frm-fieldsAdd div input{
+    padding: 2px;
+}
+
+#formAddSupplier #frm-fieldsAdd div select{
+    padding: 2px;
+}
+
+#addFiedlName{
+    top: 22px;
+}
+#addFiedlID{
+    top: 52px;
+}
+#addFiedlNit{
+    top: 82px;
+}
+#addFiedlPhone{
+    top: 112px;
+}
+#addFiedlAddress{
+    top: 142px;
+}
+#addFiedlEmail{
+    top: 172px;
+}
+
+#btn-saveAddSupplier{
+    position: absolute;
+    top: 230px;
+    width: 80%;
+    left: 10%;
+    height: 30px;
+    background: #1c94c4;
+    cursor: pointer;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+#btn-saveAddSupplier .content-buttonDialogs{
+    position: absolute;
+    width: 50%;
+    left: 35%;
+}
+
+#btn-saveAddSupplier .content-buttonDialogs img{
+    float: left;
+}
+
+#btn-saveAddSupplier .content-buttonDialogs p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.32em;
+    font-weight: bold;
+    color: #ffffff;
+    left: 30px;
+    float: left;
+}
+
+#btn-saveAddSupplier:hover{
+    cursor: pointer;
+    background: #0092ef;
+}
+
+
+/*********loading **********/
+
+.loadingProcess{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 30;
+    background-color: rgba(255,255,255, 0.9);
+    top: 0px;
+    left: 0px;
+}
+
+#processLoadingContent{
+    position: relative;
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 250px;
+}
+
+#imgLoadingProccess{
+    position: relative;
+    margin: 0 auto;
+}
+
+#lblLoadingProccess{
+    position: relative;
+    margin: 0 auto;
+    color: #0085B2;
+    margin-left: 70px;
+}

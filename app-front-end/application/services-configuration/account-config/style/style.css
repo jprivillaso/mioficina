@@ -1,0 +1,478 @@
+/* 
+    Document   : style
+    Created on : 18/06/2012, 02:28:27 PM
+    Author     : mioficina.co
+    Description:
+        styles for manager concepts
+*/
+
+root { 
+    display: block;
+}
+
+#info{
+    position: relative;
+    height: 30px;
+    width: 60%;
+    left: 5%;
+}
+
+#info p{
+    color: red;
+    margin-top: 10px;
+}
+
+.dialog{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 20;
+    background-color: rgba(255,255,255, 0.9);
+    top: 0px;
+    left: 0px;
+}
+
+.dialog .btn-closeDialog{
+    position: absolute;
+    cursor: pointer;
+    right: 6px;
+    bottom: 6px;
+    background: url('http://mioficina.co/app-front-end/resources/multimedia/images/controls-close.png');
+    background-position: top center;
+    width: 25px;
+    height: 25px;
+}
+
+.dialog .btn-closeDialog:hover{
+    background: url('http://mioficina.co/app-front-end/resources/multimedia/images/controls-close.png');
+    background-position: bottom center;
+}
+
+.dialog .btn-closeDialog p{
+    color: #F90;
+    font-size: 1.1em;
+}
+
+#infoDialog{
+    position: absolute;
+    top:5px;
+    height: 40px;
+    width: 90%;
+    left:5%;
+}
+
+#infoDialog p{
+    margin-top: 10px;
+    color:red;
+}
+
+
+.dialog .titleDialog{
+    position: absolute;
+    width: 90%;
+    top: 5px;
+    height: 30px;
+}
+
+.dialog .titleDialog p{
+    color: #0085B2;
+    text-align: center;
+    font-size: 1.35em;
+    font-weight: bold;
+}
+
+.btnActionDilog{
+    position: absolute;
+    width: 100%;
+}
+
+/*** dialog edit accountnt building ***/
+
+#dlgEditDataUser{
+    position: absolute;
+    padding:10px;
+    background: #ffffff;
+    top: 50px;
+    left: 12%;
+    width: 76%;
+    height: 330px;
+    border: 2px solid #ccccff;
+}
+
+#formEditDataUser #frm-labelsEditDataUser{
+    position: absolute;
+    left: 10px;
+    width: 110px;
+    height: 330px;
+    top: 10px;
+}
+
+#formEditDataUser #frm-labelsEditDataUser p{
+    position: absolute;
+    text-align: right;
+    font-weight: bold;
+    width: 100%;
+}
+
+#lblEditNameUser{
+    top: 25px;
+}
+#lblEditIDUser{
+    top: 55px;
+}
+#lblEditNickUser{
+    top: 85px;
+}
+#lblEditEmailUser{
+    top: 115px;
+}
+#lblEditHomePhoneUser{
+    top: 145px;
+}
+#lblEditOfficePhoneUser{
+    top: 175px;
+}
+#lblEditCelPhoneUser{
+    top: 205px;
+}
+
+#formEditDataUser #frm-fieldsEditDataUser{
+    position: absolute;
+    left: 130px;
+    width: 350px;
+    height: 330px;
+    top: 10px;
+}
+
+#formEditDataUser #frm-fieldsEditDataUser div{
+    position: absolute;
+    width: 100%;
+}
+
+#formEditDataUser #frm-fieldsEditDataUser div input{
+    padding: 2px;
+}
+
+#formEditDataUser #frm-fieldsEditDataUser div select{
+    padding: 2px;
+}
+
+#editFiedlNameUser{
+    top: 22px;
+}
+#editFiedlIDUser{
+    top: 52px;
+}
+#editFiedlNickUser{
+    top: 82px;
+}
+#editFiedlEmailUser{
+    top: 112px;
+}
+#editFiedlHomePhoneUser{
+    top: 142px;
+}
+#editFiedlOfficePhoneUser{
+    top: 172px;
+}
+#editFiedlCelPhoneUser{
+    top: 202px;
+}
+
+#btn-saveEditDataUser{
+    position: absolute;
+    top: 280px;
+    width: 80%;
+    left: 10%;
+    height: 30px;
+    background: #1c94c4;
+    cursor: pointer;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+#btn-saveEditDataUser .content-buttonDialogs{
+    position: absolute;
+    width: 50%;
+    left: 35%;
+}
+
+#btn-saveEditDataUser .content-buttonDialogs img{
+    float: left;
+}
+
+#btn-saveEditDataUser .content-buttonDialogs p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.32em;
+    font-weight: bold;
+    color: #ffffff;
+    left: 30px;
+    float: left;
+}
+
+#btn-saveEditDataUser:hover{
+    cursor: pointer;
+    background: #0092ef;
+}
+
+
+/** tags section **/
+
+#tagsSection{
+    width: 95%;
+    min-height: 300px;
+    border: 1px solid #0099ff;
+    margin: 0 auto;
+}
+
+#tagsSection #titlesTags{
+    width: 100%;
+    /*border: 1px solid #1c94c4;*/
+    overflow: hidden;
+}
+
+#tagsSection #titlesTags .titleTag{
+    min-width: 80px;
+    height: 30px;
+    background: #0085B2;
+    float: left;
+    margin: 0px;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+}
+
+#tagsSection #titlesTags .titleTag:hover{
+    background: #1c94c4;
+}
+
+#tagsSection #titlesTags .active{
+    cursor: auto;
+    background: #1c94c4;
+}
+
+#tagsSection #titlesTags .titleTag p{
+    color: #ffffff;
+    text-align: center;
+    margin-top: 7px;
+    padding: 0px 7px;
+}
+
+#tagsSection #contentTags{
+    width: 100%;
+    /*border: 1px solid #F90;*/
+    clear: both;
+    margin-top: 6px;
+}
+
+#tagsSection #contentTags .contentTag{
+    width: 99%;
+    margin: 0 auto;
+    display: none;
+}
+
+#configDataUser{
+    /*border: 1px solid #ff3333;*/
+}
+
+#configDataUser .titleContentTag{
+    width: 99%;
+    margin: 0 auto;
+    height: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    background: #0085B2;
+}
+
+#configDataUser .titleContentTag p{
+    text-align: center;
+    color: #ffffff;
+    padding-top: 7px;
+}
+
+#configDataUser #infoValues{
+    margin-left: 20px;
+}
+
+#configDataUser #btn-editInfoUser{
+    cursor: pointer;
+    background: #0092ef;
+    width: 100px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+#configDataUser #btn-editInfoUser:hover{
+    background: #0099FF;
+}
+
+#configDataUser #btn-editInfoUser p{
+    color: #ffffff;
+    padding: 4px 20px;
+    text-align: center;
+}
+
+#configPasswordUser{
+    /*border: 1px solid #ff3333;*/
+}
+
+#configPasswordUser #buttonEditOfficesAccountant{
+    position: relative;
+    float: right;
+    margin-bottom: 10px;
+    margin-top: 3px;
+    width: 210px;
+    height: 28px;
+    display: none;
+    background: #0092ef;
+    cursor: pointer;
+    z-index: 18;
+    margin-right: 20px;
+}
+
+#configPasswordUser .titleContentTag{
+    width: 99%;
+    margin: 0 auto;
+    height: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    background: #0085B2;
+}
+
+#configPasswordUser .titleContentTag p{
+    text-align: center;
+    color: #ffffff;
+    padding-top: 7px;
+}
+
+#formEditPassword{
+    position: absolute;
+}
+
+#formEditPassword #frm-labelsEditPasswordUser{
+    position: absolute;
+    left: 10px;
+    width: 210px;
+    height: 330px;
+    top: 10px;
+}
+
+#formEditPassword #frm-labelsEditPasswordUser p{
+    position: absolute;
+    text-align: right;
+    font-weight: bold;
+    width: 100%;
+}
+
+#lblPreviewPassword{
+    top: 25px;
+}
+#lblCurrentPassword{
+    top: 55px;
+}
+#lblConfirmCurrentPassword{
+    top: 85px;
+}
+
+#formEditPassword #frm-fieldsEditPasswordUser{
+    position: absolute;
+    left: 230px;
+    width: 350px;
+    height: 330px;
+    top: 10px;
+}
+
+#formEditPassword #frm-fieldsEditPasswordUser div{
+    position: absolute;
+    width: 100%;
+}
+
+#formEditPassword #frm-fieldsEditPasswordUser div input{
+    padding: 2px;
+}
+
+#formEditDataUser #frm-fieldsEditPasswordUser div select{
+    padding: 2px;
+}
+
+#editFiedlPreviewPassword{
+    top: 22px;
+}
+#editFiedlCurrentPassword{
+    top: 52px;
+}
+#editFiedlConfirmCurrentPassword{
+    top: 82px;
+}
+
+#btn-saveEditPasswordUser{
+    position: absolute;
+    top: 280px;
+    width: 80%;
+    left: 10%;
+    height: 30px;
+    background: #1c94c4;
+    cursor: pointer;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+#btn-saveEditPasswordUser .content-buttonTags{
+    position: absolute;
+    width: 50%;
+    left: 35%;
+}
+
+#btn-saveEditPasswordUser .content-buttonTags img{
+    float: left;
+}
+
+#btn-saveEditPasswordUser .content-buttonTags p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.32em;
+    font-weight: bold;
+    color: #ffffff;
+    left: 30px;
+    float: left;
+}
+
+#btn-saveEditPasswordUser:hover{
+    cursor: pointer;
+    background: #0092ef;
+}
+
+
+/*********loading **********/
+
+.loadingProcess{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 30;
+    background-color: rgba(255,255,255, 0.9);
+    top: 0px;
+    left: 0px;
+}
+
+#processLoadingContent{
+    position: relative;
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 250px;
+}
+
+#imgLoadingProccess{
+    position: relative;
+    margin: 0 auto;
+}
+
+#lblLoadingProccess{
+    position: relative;
+    margin: 0 auto;
+    color: #0085B2;
+    margin-left: 70px;
+}

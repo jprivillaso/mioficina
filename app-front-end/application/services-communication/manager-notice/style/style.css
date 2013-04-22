@@ -1,0 +1,423 @@
+/* 
+    Document   : style
+    Created on : 18/06/2012, 02:28:27 PM
+    Author     : mioficina.co
+    Description:
+        styles for manager concepts
+*/
+
+root { 
+    display: block;
+}
+
+#info{
+    position: relative;
+    height: 30px;
+    width: 60%;
+    left: 5%;
+}
+
+#info p{
+    color: red;
+    margin-top: 10px;
+}
+
+.dialog{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 20;
+    background-color: rgba(255,255,255, 0.9);
+    top: 0px;
+    left: 0px;
+}
+
+.dialog .btn-closeDialog{
+    position: absolute;
+    cursor: pointer;
+    right: 6px;
+    bottom: 6px;
+    background: url('http://mioficina.co/app-front-end/resources/multimedia/images/controls-close.png');
+    background-position: top center;
+    width: 25px;
+    height: 25px;
+}
+
+.dialog .btn-closeDialog:hover{
+    background: url('http://mioficina.co/app-front-end/resources/multimedia/images/controls-close.png');
+    background-position: bottom center;
+}
+
+.dialog .btn-closeDialog p{
+    color: #F90;
+    font-size: 1.1em;
+}
+
+#infoDialog{
+    position: absolute;
+    top:5px;
+    height: 40px;
+    width: 90%;
+    left:5%;
+}
+
+#infoDialog p{
+    margin-top: 10px;
+    color:red;
+}
+
+
+.dialog .titleDialog{
+    position: absolute;
+    width: 90%;
+    top: 5px;
+    height: 30px;
+}
+
+.dialog .titleDialog p{
+    color: #0085B2;
+    text-align: center;
+    font-size: 1.35em;
+    font-weight: bold;
+}
+
+.btnActionDilog{
+    position: absolute;
+    width: 100%;
+}
+
+/*** dialog select addresses ***/
+
+#dlgSelectUser{
+    position: absolute;
+    padding:10px;
+    background: #ffffff;
+    top: 20px;
+    left: 12%;
+    width: 76%;
+    height: 450px;
+    border: 2px solid #ccccff;
+}
+
+#dlgSelectUser #contentFindUsers{
+    position: relative;
+    border: 2px solid #ccccff;
+    width: 96%;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 380px;
+    overflow-y: scroll;
+}
+
+#contentFindUsers .itemTypeUsers{
+    border: 1px solid #1c94c4;
+    width: 99%;
+}
+
+#contentFindUsers .itemTypeUsers .titleTypeUser{
+    /*border: 1px solid #1c94c4;*/
+    background: #0085B2;
+    width: 100%;
+    height: 25px;
+    margin-bottom: 0px;
+    clear: both;
+    cursor: pointer;
+}
+
+#contentFindUsers .itemTypeUsers .titleTypeUser img{
+    position: relative;
+    margin-left: 140px;
+    float: left;
+    width: 26px;
+}
+
+#contentFindUsers .itemTypeUsers .titleTypeUser input{
+    margin-top: 5px;
+    float: left;
+    margin-left: 10px;
+}
+
+#contentFindUsers .itemTypeUsers .titleTypeUser p{
+    position: relative;
+    color: #ffffff;
+    margin-left: 10px;
+    margin-top: 5px;
+    float: left;
+    text-align: center;
+}
+
+#contentFindUsers .itemTypeUsers .contentListUsers{
+    /*border: 1px solid #F90;*/
+    margin-top: 0px;
+    overflow: hidden;
+    clear: both;
+    margin-bottom: 5px;
+    display: none;
+}
+
+#contentFindUsers .itemTypeUsers .contentListUsers .eachUserList{
+    width: 100%;
+    clear: both;
+    border-top: 1px dashed #cccccc;
+}
+
+#contentFindUsers .itemTypeUsers .contentListUsers .eachUserList input{
+    float: left;
+    margin: 3px 0px 0px 20px;
+}
+#contentFindUsers .itemTypeUsers .contentListUsers .eachUserList p{
+    float: left;
+    margin: 0px 0px 0px 10px;
+}
+
+#contentFindUsers .itemTypeUsers .contentListUsers .noUserList{
+    width: 100%;
+    clear: both;
+    font-style: italic;
+    margin: 0px 20px;
+}
+
+#btn-okSelectUsers{
+    position: absolute;
+    top: 428px;
+    width: 80%;
+    left: 10%;
+    height: 30px;
+    background: #1c94c4;
+    cursor: pointer;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+#btn-okSelectUsers .content-buttonDialogs{
+    position: absolute;
+    width: 50%;
+    left: 35%;
+}
+
+#btn-okSelectUsers .content-buttonDialogs img{
+    float: left;
+}
+
+#btn-okSelectUsers .content-buttonDialogs p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.32em;
+    font-weight: bold;
+    color: #ffffff;
+    left: 30px;
+    float: left;
+}
+
+#btn-okSelectUsers:hover{
+    cursor: pointer;
+    background: #0092ef;
+}
+
+
+
+/*** dialog conform sended ***/
+
+#dlgConfirmSent{
+    position: absolute;
+    padding:10px;
+    background: #ffffff;
+    top: 160px;
+    left: 30%;
+    width: 40%;
+    height: 100px;
+    border: 2px solid #ccccff;
+}
+
+#dlgConfirmSent #contentConfirmSent{
+    position: relative;
+    /*border: 2px solid #ccccff;*/
+    width: 96%;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 80px;
+}
+
+#dlgConfirmSent #contentConfirmSent p{
+    text-align: center;
+}
+
+/** tags section **/
+
+.page{
+    position: relative;
+    display: none;
+    /*border: 1px solid #1c94c4;*/
+    width: 99%;
+    min-height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.page .titlePage{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.page .titlePage p{
+    color: #0085B2;
+    text-align: center;
+}
+
+#pageSelectTypeNotification{
+    /*border: 1px solid #F90;*/
+}
+
+#pageSelectTypeNotification #selectTypeNotification{
+    position: relative;
+    width: 500px;
+    /*border: 1px solid #0099ff;*/
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#pageSelectTypeNotification #selectTypeNotification .tagNotice{
+    width: 480px;
+    height: 30px;
+    background: #0085B2;
+    margin: 0 auto;
+    /*border: 1px solid #ffffff;*/
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+#pageSelectTypeNotification #selectTypeNotification .tagNotice:hover{
+    background: #1c94c4;
+}
+
+.tagNotice p{
+    color: #ffffff;
+    text-align: center;
+    padding-top: 7px;
+}
+
+/*page form*/
+
+#pageSendNotification{
+    /*border: 1px solid #F90;*/
+}
+#pageSendNotification #formCommunication{
+    position: relative;
+    /*border: 1px solid #F90;*/
+    width: 99%;
+    min-height: 300px;
+    margin: 0 auto;
+}
+
+#pageSendNotification #formCommunication div input{
+    padding: 2px;
+}
+
+#pageSendNotification #formCommunication div select{
+    padding: 2px;
+}
+
+#lblSubject{
+    float: left;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+#fieldSubject{
+    float: left;
+    
+}
+
+#fieldSubject input{
+    width: 600px;
+}
+
+#file_upload{
+    clear: both;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    width: 400px;
+}
+
+#btn-selectAddresses{
+    position: absolute;
+    width: 200px;
+    border: 1px solid #F90;
+    left: 425px;
+    top: 40px;
+}
+
+#buttonSendNotice{
+    position: relative;
+    width: 80%;
+    height: 30px;
+    margin: 0 auto;
+    background: #1c94c4;
+    cursor: pointer;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    margin-top: 20px;
+}
+
+#buttonSendNotice .content-buttonTags{
+    position: relative;
+    width: 50%;
+    margin-left: 35%;
+}
+
+#buttonSendNotice .content-buttonTags img{
+    float: left;
+}
+
+#buttonSendNotice .content-buttonTags p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.32em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: 30px;
+    float: left;
+}
+
+#buttonSendNotice:hover{
+    cursor: pointer;
+    background: #0092ef;
+}
+
+
+/*********loading **********/
+
+.loadingProcess{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 30;
+    background-color: rgba(255,255,255, 0.9);
+    top: 0px;
+    left: 0px;
+}
+
+#processLoadingContent{
+    position: relative;
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 250px;
+}
+
+#imgLoadingProccess{
+    position: relative;
+    margin: 0 auto;
+}
+
+#lblLoadingProccess{
+    position: relative;
+    margin: 0 auto;
+    color: #0085B2;
+    margin-left: 70px;
+}

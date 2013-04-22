@@ -1,0 +1,571 @@
+/* 
+    Document   : style
+    Created on : 18/06/2012, 02:28:27 PM
+    Author     : mioficina.co
+    Description:
+        styles for manager concepts
+*/
+
+root { 
+    display: block;
+}
+
+#tableGridOfficesAccountant{
+    position: relative;
+    width: 96%;
+    left: 2%;
+    height: 400px;
+    margin-bottom: 15px;
+}
+
+#menuGridOfficesAccountant{
+    position: relative;
+    height: 34px;
+    width: 100%;
+    border-bottom: 1px solid #E2EDF2;
+}
+
+#menuGridOfficesAccountant div{
+    border-left: 1px solid #ffffff;
+    float: left;
+    height: 100%;
+    background-color: #0085B2;
+}
+
+#menuGridOfficesAccountant div p{
+    margin-top: 7px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+
+#pagination{
+    position: relative;
+    border-top: 1px solid #0092ef;
+    height: 30px;
+    width: 96%;
+    left: 2%;
+}
+
+#pagination #list-pagination{
+    margin-left: 100px;
+}
+
+.class-pagination-on{
+    position: relative;
+    border: 1px solid #0085B2;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top:2px;
+    margin-left: 2px;
+    background: #0092ef;
+}
+
+.class-pagination-on p{
+    text-align: center;
+    margin-top: 2px;
+    color: #ffffff;
+}
+
+.class-pagination-off{
+    position: relative;
+    border: 1px solid #0085B2;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top:2px;
+    margin-left: 2px;
+    background: #0092ef;
+    cursor: pointer;
+}
+.class-pagination-off p{
+    text-align: center;
+    margin-top: 2px;
+    color: #ffffff;
+}
+
+.eachOfficeAccountantGrid{
+    position: relative;
+    float: none;
+    width: 100%;
+    height: 30px;
+    border: 1px solid #E2EDF2;
+}
+
+.eachOfficeAccountantGrid div{
+    border-left: 1px solid #E2EDF2;
+    float: left;
+    height: 100%;
+}
+.eachOfficeAccountantGrid div p{
+    text-align: center;
+    margin-top: 4px;
+}
+
+.eachOfficeAccountantGrid div p img{
+    margin-top: -4px;
+    cursor: pointer;
+}
+
+.eachOfficeAccountantGrid .chkOffice{
+    margin: 5px;
+    width: 25px;
+    height: 25px;
+    color: #0085B2;
+}
+
+.classChkAll{
+    margin: 7px;
+    width: 25px;
+    background: #F90;
+    color: #0099ff;
+}
+
+#info{
+    position: relative;
+    height: 30px;
+    width: 60%;
+    left: 5%;
+}
+
+#info p{
+    color: red;
+    margin-top: 10px;
+}
+
+.dialog{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 20;
+    background-color: rgba(255,255,255, 0.9);
+    top: 0px;
+    left: 0px;
+}
+
+.dialog .btn-closeDialog{
+    position: absolute;
+    cursor: pointer;
+    right: 6px;
+    bottom: 6px;
+    background: url('http://mioficina.co/app-front-end/resources/multimedia/images/controls-close.png');
+    background-position: top center;
+    width: 25px;
+    height: 25px;
+}
+
+.dialog .btn-closeDialog:hover{
+    background: url('http://mioficina.co/app-front-end/resources/multimedia/images/controls-close.png');
+    background-position: bottom center;
+}
+
+.dialog .btn-closeDialog p{
+    color: #F90;
+    font-size: 1.1em;
+}
+
+#infoDialog{
+    position: absolute;
+    top:5px;
+    height: 40px;
+    width: 90%;
+    left:5%;
+}
+
+#infoDialog p{
+    margin-top: 10px;
+    color:red;
+}
+
+
+.dialog .titleDialog{
+    position: absolute;
+    width: 90%;
+    top: 5px;
+    height: 30px;
+}
+
+.dialog .titleDialog p{
+    color: #0085B2;
+    text-align: center;
+    font-size: 1.35em;
+    font-weight: bold;
+}
+
+.btnActionDilog{
+    position: absolute;
+    width: 100%;
+}
+
+
+/** edit admon value **/
+
+#dlgEditAdmonValue{
+    position: absolute;
+    padding:10px;
+    background: #ffffff;
+    top: 50px;
+    left: 12%;
+    width: 76%;
+    height: 250px;
+    border: 2px solid #ccccff;
+}
+
+#formEditAdmonValue{
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    border: 1px solid #E2EDF2;
+    top: 30px;
+}
+
+#formEditAdmonValue #frm-labelsEdit{
+    position: absolute;
+    left: 10px;
+    width: 110px;
+    height: 140px;
+    top: 10px;
+}
+
+#formEditAdmonValue #frm-labelsEdit p{
+    position: absolute;
+    text-align: right;
+    font-weight: bold;
+    width: 100%;
+}
+
+#formEditAdmonValue #frm-fieldsEdit{
+    position: absolute;
+    left: 130px;
+    width: 350px;
+    height: 140px;
+    top: 10px;
+}
+
+#formEditAdmonValue #frm-fieldsEdit div{
+    position: absolute;
+    width: 100%;
+}
+
+#formEditAdmonValue #frm-fieldsEdit div input{
+    padding: 2px;
+}
+
+#formEditAdmonValue #frm-fieldsEdit div select{
+    padding: 2px;
+}
+
+#lblEditAdmonValue{
+    top: 25px;
+}
+
+#lblEditFormatedAdmonValue{
+    top: 22px;
+    left: 280px;
+    text-align: left;
+    width: 140px;
+    border: 1px solid #8ae234;
+    height: 20px;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+#editFiedlAdmonValue{
+    top: 25px;
+}
+
+#formEditAdmonValue #btn-saveEditAdmonValue{
+    position: absolute;
+    top: 170px;
+    width: 80%;
+    left: 10%;
+    height: 30px;
+    background: #1c94c4;
+    cursor: pointer;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+#formEditAdmonValue #btn-saveEditAdmonValue .content-buttonDialogs{
+    position: absolute;
+    width: 50%;
+    left: 35%;
+}
+
+#formEditAdmonValue #btn-saveEditAdmonValue .content-buttonDialogs img{
+    float: left;
+}
+
+#formEditAdmonValue #btn-saveEditAdmonValue .content-buttonDialogs p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.32em;
+    font-weight: bold;
+    color: #ffffff;
+    left: 30px;
+    float: left;
+}
+
+#formEditAdmonValue #btn-saveEditAdmonValue:hover{
+    cursor: pointer;
+    background: #0092ef;
+}
+
+
+/*** dialog edit accountnt building ***/
+
+#dlgEditBuildingAccountant{
+    position: absolute;
+    padding:10px;
+    background: #ffffff;
+    top: 50px;
+    left: 12%;
+    width: 76%;
+    height: 280px;
+    border: 2px solid #ccccff;
+}
+
+#formEditBuildingAccountant #frm-labelsEditBuildingAccountant{
+    position: absolute;
+    left: 10px;
+    width: 110px;
+    height: 330px;
+    top: 10px;
+}
+
+#formEditBuildingAccountant #frm-labelsEditBuildingAccountant p{
+    position: absolute;
+    text-align: right;
+    font-weight: bold;
+    width: 100%;
+}
+
+#lblEditInterestRate{
+    top: 27px;
+}
+
+#lblEditPeriodsElapsed{
+    top: 57px;
+}
+
+#formEditBuildingAccountant #frm-fieldsEditBuildingAccountant{
+    position: absolute;
+    left: 130px;
+    width: 350px;
+    height: 330px;
+    top: 10px;
+}
+
+#formEditBuildingAccountant #frm-fieldsEditBuildingAccountant div{
+    position: absolute;
+    width: 100%;
+}
+
+#formEditBuildingAccountant #frm-fieldsEditBuildingAccountant div input{
+    padding: 2px;
+}
+
+#formEditBuildingAccountant #frm-fieldsEditBuildingAccountant div select{
+    padding: 2px;
+}
+
+#editFiedlInterestRate{
+    top: 25px;
+}
+#editFiedlPeriodsElapsed{
+    top: 55px;
+}
+
+#btn-saveEditBuildingAccountant{
+    position: absolute;
+    top: 230px;
+    width: 80%;
+    left: 10%;
+    height: 30px;
+    background: #1c94c4;
+    cursor: pointer;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+#btn-saveEditBuildingAccountant .content-buttonDialogs{
+    position: absolute;
+    width: 50%;
+    left: 35%;
+}
+
+#btn-saveEditBuildingAccountant .content-buttonDialogs img{
+    float: left;
+}
+
+#btn-saveEditBuildingAccountant .content-buttonDialogs p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.32em;
+    font-weight: bold;
+    color: #ffffff;
+    left: 30px;
+    float: left;
+}
+
+#btn-saveEditBuildingAccountant:hover{
+    cursor: pointer;
+    background: #0092ef;
+}
+
+
+/** tags section **/
+
+#tagsSection{
+    width: 95%;
+    min-height: 300px;
+    border: 1px solid #0099ff;
+    margin: 0 auto;
+}
+
+#tagsSection #titlesTags{
+    width: 100%;
+    /*border: 1px solid #1c94c4;*/
+    overflow: hidden;
+}
+
+#tagsSection #titlesTags .titleTag{
+    min-width: 80px;
+    height: 30px;
+    background: #0085B2;
+    float: left;
+    margin: 0px;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+}
+
+#tagsSection #titlesTags .titleTag:hover{
+    background: #1c94c4;
+}
+
+#tagsSection #titlesTags .active{
+    cursor: auto;
+    background: #1c94c4;
+}
+
+#tagsSection #titlesTags .titleTag p{
+    color: #ffffff;
+    text-align: center;
+    margin-top: 7px;
+    padding: 0px 7px;
+}
+
+#tagsSection #contentTags{
+    width: 100%;
+    /*border: 1px solid #F90;*/
+    clear: both;
+    margin-top: 6px;
+}
+
+#tagsSection #contentTags .contentTag{
+    width: 99%;
+    margin: 0 auto;
+    display: none;
+}
+
+#configBuilding{
+    /*border: 1px solid #ff3333;*/
+}
+
+#configBuilding .titleContentTag{
+    width: 99%;
+    margin: 0 auto;
+    height: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    background: #0085B2;
+}
+
+#configBuilding .titleContentTag p{
+    text-align: center;
+    color: #ffffff;
+    padding-top: 7px;
+}
+
+#configBuilding #btn-editBuildingAccountant{
+    cursor: pointer;
+    background: #0092ef;
+    width: 100px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+#configBuilding #btn-editBuildingAccountant:hover{
+    background: #0099FF;
+}
+
+#configBuilding #btn-editBuildingAccountant p{
+    color: #ffffff;
+    padding: 4px 20px;
+    text-align: center;
+}
+
+#configEachOffice{
+    /*border: 1px solid #ff3333;*/
+}
+
+#configEachOffice #buttonEditOfficesAccountant{
+    position: relative;
+    float: right;
+    margin-bottom: 10px;
+    margin-top: 3px;
+    width: 210px;
+    height: 28px;
+    display: none;
+    background: #0092ef;
+    cursor: pointer;
+    z-index: 18;
+    margin-right: 20px;
+}
+
+#configEachOffice #buttonEditOfficesAccountant:hover{
+    background: #0099FF;
+}
+
+#configEachOffice #buttonEditOfficesAccountant p{
+    color: #ffffff;
+    text-align: center;
+    padding-top: 6px;
+    font-weight: bold;
+}
+
+/*********loading **********/
+
+.loadingProcess{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 30;
+    background-color: rgba(255,255,255, 0.9);
+    top: 0px;
+    left: 0px;
+}
+
+#processLoadingContent{
+    position: relative;
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 250px;
+}
+
+#imgLoadingProccess{
+    position: relative;
+    margin: 0 auto;
+}
+
+#lblLoadingProccess{
+    position: relative;
+    margin: 0 auto;
+    color: #0085B2;
+    margin-left: 70px;
+}

@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ margin:0px; padding:0px;}
+
+img { border:0px;}
+
+#container-service-body {
+    background:#FFFFFF;
+    color: #333333;
+    font-family: arial,verdana,helvetica,sans-serif;
+    font-size: 12px;
+}
+
+#container-service{
+    position:relative;
+    width:795px;
+    margin: 0 auto;
+    overflow:hidden;
+}
+
+/**header **/
+#service { 
+    width:100%;
+    position:relative;
+    height:auto;
+    margin-top:2px;
+}
+
+#service #logo{
+    position:relative;
+    float:left;
+    width:60px;
+}
+
+#service #title{
+    position:relative;
+    float:left;
+    width:735px;
+    font-size: 1.3em;
+    color: #FBFBEF;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+#service #path{
+    position:relative;
+    width:100%;
+    margin-top:15px;
+    clear:both;
+}
+
+#service #path a{
+    color: #0092ef;
+    text-decoration: none;
+}
+
+#service #path a:hover{
+    color: #0092ef;
+}
+
+#titlebar{
+    position: relative;
+    height:30px;
+    width: 100%;
+    background-image: url('http://mioficina.co/app-front-end/resources/multimedia/images/bar-bg.png');
+}
+
+/* body content */
+#content-service {
+    position:relative;
+    width:99%;
+    margin: 0 auto;
+    margin-top:10px;
+    clear:both;
+    overflow:hidden;
+    border: 1px solid #E2EDF2;
+    min-height: 400px;
+}
+
+/* footer*/
+
+footer #footer-service{
+    position:relative;
+    width:100%;
+    margin-bottom:5px;
+}
+
+footer#footer-service p{
+    padding:10px 0px 0px 15px;
+    text-align:center;
+}
+
+/* dialog */
+
+.dialog {
+    color: #333333;
+    font-family: arial,verdana,helvetica,sans-serif;
+    font-size: 12px;
+}

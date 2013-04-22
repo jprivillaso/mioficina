@@ -1,0 +1,639 @@
+/* 
+    Document   : style
+    Created on : 18/06/2012, 02:28:27 PM
+    Author     : miunidad.com
+    Description:
+        styles for view properties
+*/
+
+root { 
+    display: block;
+}
+
+#tableGridUsers{
+    position: relative;
+    width: 96%;
+    left: 2%;
+    height: 400px;
+    margin-bottom: 5px;
+}
+
+#menuGridUsers{
+    position: relative;
+    height: 34px;
+    width: 100%;
+    border-bottom: 1px solid #E2EDF2;
+}
+
+#menuGridUsers div{
+    border-left: 1px solid #ffffff;
+    float: left;
+    height: 100%;
+    background-color: #0085B2;
+}
+
+#menuGridUsers div p{
+    margin-top: 7px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#pagination{
+    position: relative;
+    border-top: 1px solid #0092ef;
+    height: 30px;
+    width: 96%;
+    left: 2%;
+}
+
+#pagination #list-pagination{
+    margin-left: 100px;
+}
+
+.class-pagination-on{
+    position: relative;
+    border: 1px solid #0085B2;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top:2px;
+    margin-left: 2px;
+    background: #0092ef;
+}
+.class-pagination-on p{
+    text-align: center;
+    margin-top: 2px;
+    color: #ffffff;
+}
+
+.class-pagination-off{
+    position: relative;
+    border: 1px solid #0085B2;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top:2px;
+    margin-left: 2px;
+    background: #0092ef;
+    cursor: pointer;
+}
+.class-pagination-off p{
+    text-align: center;
+    margin-top: 2px;
+    color: #ffffff;
+}
+
+.eachUserGrid{
+    position: relative;
+    float: none;
+    width: 100%;
+    height: 30px;
+    border: 1px solid #E2EDF2;
+}
+
+.eachUserGrid div{
+    border-left: 1px solid #E2EDF2;
+    float: left;
+    height: 100%;
+}
+.eachUserGrid div p{
+    text-align: center;
+    margin-top: 4px;
+}
+
+.eachUserGrid div p img{
+    margin-top: -4px;
+    cursor: pointer;
+}
+
+#info{
+    position: relative;
+    height: 30px;
+    width: 60%;
+    left: 5%;
+}
+
+#info p{
+    color: red;
+    margin-top: 10px;
+}
+
+.dialog{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 20;
+    background-color: rgba(255,255,255, 0.9);
+    top: 0px;
+    left: 0px;
+}
+
+.dialog .btn-closeDialog{
+    position: absolute;
+    cursor: pointer;
+    right: 6px;
+    bottom: 6px;
+    background: url('http://mioficina.co/app-front-end/resources/multimedia/images/controls-close.png');
+    background-position: top center;
+    width: 25px;
+    height: 25px;
+}
+
+.dialog .btn-closeDialog:hover{
+    background: url('http://mioficina.co/app-front-end/resources/multimedia/images/controls-close.png');
+    background-position: bottom center;
+}
+
+.dialog .btn-closeDialog p{
+    color: #F90;
+    font-size: 1.1em;
+}
+
+#infoDialog{
+    position: absolute;
+    top:5px;
+    height: 40px;
+    width: 90%;
+    left:5%;
+}
+
+#infoDialog p{
+    margin-top: 10px;
+    color:red;
+}
+
+
+.dialog .titleDialog{
+    position: absolute;
+    width: 90%;
+    top: 5px;
+    height: 30px;
+}
+
+.dialog .titleDialog p{
+    color: #0085B2;
+    text-align: center;
+    font-size: 1.35em;
+    font-weight: bold;
+}
+
+.btnActionDilog{
+    position: absolute;
+    width: 100%;
+}
+
+/*** bar add item **/
+#addUser{
+    position: relative;
+    height: 30px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#addUser img{
+    float: right;
+    cursor: pointer;
+}
+/*** bar add item **/
+
+
+/* dialog edit user ****/
+
+#dlgEditUser{
+    position: absolute;
+    padding:10px;
+    background: #ffffff;
+    top: 50px;
+    left: 12%;
+    width: 76%;
+    height: 310px;
+    border: 2px solid #ccccff;
+}
+
+#formEditUser{
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    border: 1px solid #E2EDF2;
+    top: 30px;
+}
+
+#formEditUser #frm-labelsEdit{
+    position: absolute;
+    left: 10px;
+    width: 110px;
+    height: 290px;
+    top: 10px;
+}
+
+#formEditUser #frm-labelsEdit p{
+    position: absolute;
+    text-align: right;
+    font-weight: bold;
+    width: 100%;
+}
+
+#lblEditName{
+    top: 5px;
+}
+#lblEditID{
+    top: 35px;
+}
+#lblEditEmail{
+    top: 65px;
+}
+#lblEditPhoneHome{
+    top: 95px;
+}
+#lblEditCelPhone{
+    top: 125px;
+}
+#lblEditPhoneOffice{
+    top: 155px;
+}
+
+#formEditUser #frm-fieldsEdit{
+    position: absolute;
+    left: 130px;
+    width: 350px;
+    height: 290px;
+    top: 10px;
+}
+
+#formEditUser #frm-fieldsEdit div{
+    position: absolute;
+    width: 100%;
+}
+
+#formEditUser #frm-fieldsEdit div input{
+    padding: 2px;
+}
+
+#formEditUser #frm-fieldsEdit div select{
+    padding: 2px;
+}
+
+
+#editFiedlName{
+    top: 2px;
+}
+#editFiedlID{
+    top: 32px;
+}
+#editFiedlEmail{
+    top: 62px;
+}
+#editFiedlPhoneHome{
+    top: 92px;
+}
+#editFiedlCelPhone{
+    top: 122px;
+}
+#editFiedlPhoneOffice{
+    top: 152px;
+}
+
+#formEditUser #btn-saveChangesEditUser{
+    position: absolute;
+    top: 240px;
+    width: 80%;
+    left: 10%;
+    height: 30px;
+    background: #1c94c4;
+    cursor: pointer;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+#formEditUser #btn-saveChangesEditUser .content-buttonDialogs{
+    position: absolute;
+    width: 50%;
+    left: 35%;
+}
+
+#formEditUser #btn-saveChangesEditUser .content-buttonDialogs img{
+    float: left;
+}
+
+#formEditUser #btn-saveChangesEditUser .content-buttonDialogs p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.32em;
+    font-weight: bold;
+    color: #ffffff;
+    left: 30px;
+    float: left;
+}
+
+#formEditUser #btn-saveChangesEditUser:hover{
+    cursor: pointer;
+    background: #0092ef;
+}
+
+
+/******* dialog add user**/
+
+#dlgAddUser{
+    position: absolute;
+    padding:10px;
+    background: #ffffff;
+    top: 50px;
+    left: 12%;
+    width: 76%;
+    height: 410px;
+    border: 2px solid #ccccff;
+}
+
+#infoDialogAdd{
+    position: absolute;
+    width: 90%;
+    left: 10%;
+    top: 130px;
+    height: 20px;
+}
+
+#infoDialogAdd p{
+    color: #ff3333;
+}
+
+#dlgAddUser #tabEmailSearch{
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    height: 40px;
+    top: 50px;
+    border: 1px solid #E2EDF2;
+}
+
+#lblSearchEmail{
+    position: absolute;
+    font-weight: bold;
+    top: 13px;
+    left: 50px;
+}
+
+#searchFiedlEmail{
+    position: absolute;
+    top: 10px;
+    left: 100px;
+}
+
+#searchFiedlEmail input{
+    padding: 2px;
+    width: 170px;
+}
+
+#buttonSearchEmail{
+    position: absolute;
+    top: 6px;
+    left: 280px;
+}
+
+#buttonSearchEmail img:hover{
+    opacity: 0.5;
+}
+
+#infoDlgAddUser{
+    position: absolute;
+    top: 10px;
+    left: 330px;
+}
+#infoDlgAddUser p{
+    color: #ff3333;
+}
+
+
+#dlgAddUser #tabFormAddUser{
+    position: absolute;
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    height: 280px;
+    border: 1px solid #E2EDF2;
+    top: 110px;
+    display: none;
+}
+
+
+#formAddUser{
+    
+}
+
+#formAddUser #frm-labelsAdd{
+    position: absolute;
+    left: 10px;
+    width: 110px;
+    height: 330px;
+    top: 10px;
+}
+
+#formAddUser #frm-labelsAdd p{
+    position: absolute;
+    text-align: right;
+    font-weight: bold;
+    width: 100%;
+}
+
+#lblAddTypeUser{
+    top: 7px;
+}
+#lblAddName{
+    top: 37px;
+}
+#lblAddID{
+    top: 67px;
+}
+#lblAddEmail{
+    top: 97px;
+}
+#lblAddPhoneHome{
+    top: 127px;
+}
+#lblAddCelPhone{
+    top: 157px;
+}
+#lblAddPhoneOffice{
+    top: 187px;
+}
+
+
+#formAddUser #frm-fieldsAdd{
+    position: absolute;
+    left: 130px;
+    width: 350px;
+    height: 330px;
+    top: 10px;
+}
+
+#formAddUser #frm-fieldsAdd div{
+    position: absolute;
+    width: 100%;
+}
+
+#formAddUser #frm-fieldsAdd div input{
+    padding: 2px;
+}
+
+#formAddUser #frm-fieldsAdd div select{
+    padding: 2px;
+}
+
+
+#addFiedlTypeUser{
+    top: 5px;
+}
+#addFiedlName{
+    top: 35px;
+}
+#addFiedlID{
+    top: 65px;
+}
+#addFiedlEmail{
+    top: 95px;
+}
+#addFiedlPhoneHome{
+    top: 125px;
+}
+#addFiedlCelPhone{
+    top: 155px;
+}
+#addFiedlPhoneOffice{
+    top: 185px;
+}
+
+#btn-saveAddUser{
+    position: absolute;
+    top: 230px;
+    width: 80%;
+    left: 10%;
+    height: 30px;
+    background: #1c94c4;
+    cursor: pointer;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+#btn-saveAddUser .content-buttonDialogs{
+    position: absolute;
+    width: 50%;
+    left: 35%;
+}
+
+#btn-saveAddUser .content-buttonDialogs img{
+    float: left;
+}
+
+#btn-saveAddUser .content-buttonDialogs p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.32em;
+    font-weight: bold;
+    color: #ffffff;
+    left: 30px;
+    float: left;
+}
+
+#btn-saveAddUser:hover{
+    cursor: pointer;
+    background: #0092ef;
+}
+
+/*.btn-deleteOwner{
+    cursor: pointer;
+}*/
+
+
+/*********loading **********/
+
+.loadingProcess{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 30;
+    background-color: rgba(255,255,255, 0.9);
+    top: 0px;
+    left: 0px;
+}
+
+#processLoadingContent{
+    position: relative;
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 250px;
+}
+
+#imgLoadingProccess{
+    position: relative;
+    margin: 0 auto;
+}
+
+#lblLoadingProccess{
+    position: relative;
+    margin: 0 auto;
+    color: #0085B2;
+    margin-left: 70px;
+}
+
+/** dialogo delete item **/
+
+#dlgDeleteUser{
+    position: relative;
+    margin: 0 auto;
+    width: 500px;
+    height: 130px;
+    margin-top: 220px;
+    border:  1px solid #ff3333;
+}
+
+#dlgDeleteUser #textDeleteDialog{
+    position: absolute;
+    width: 100%;
+    margin-top: 40px;
+}
+
+#dlgDeleteUser #textDeleteDialog p{
+    text-align: center;
+    font-weight: bold;
+}
+
+#btn-deleteUser{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top:80px;
+    height: 30px;
+    background: #ff3333;
+    cursor: pointer;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+#btn-deleteUser:hover{
+    background: #ff3333;
+}
+
+#btn-deleteUser .content-buttonDialogs{
+    position: absolute;
+    width: 50%;
+    left: 35%;
+}
+
+#btn-deleteUser .content-buttonDialogs img{
+    float: left;
+}
+
+#btn-deleteUser .content-buttonDialogs p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.32em;
+    font-weight: bold;
+    color: #ffffff;
+    left: 30px;
+    float: left;
+}

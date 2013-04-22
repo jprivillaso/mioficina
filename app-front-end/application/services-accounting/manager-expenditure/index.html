@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <!--<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />-->
+        <link type="text/css" rel="stylesheet" href="http://mioficina.co/app-front-end/resources/pluggins/jquery-iu-1.8.18/css/custom-theme/jquery-ui-1.8.18.custom.css" />
+        <link type="text/css" rel="stylesheet" href="http://mioficina.co/app-front-end/global/style-services.css" />
+        <link type="text/css" rel="stylesheet" href="http://mioficina.co/app-front-end/application/services-accounting/manager-expenditure/style/style.css" />
+        <script src="http://mioficina.co/app-front-end/resources/pluggins/jquery-iu-1.8.18/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="http://mioficina.co/app-front-end/resources/global/global_functions.js" type="text/javascript"></script>
+        <script src="http://mioficina.co/app-front-end/application/services-accounting/manager-expenditure/controller/controller.js" type="text/javascript"></script>
+        <script src="http://mioficina.co/app-front-end/resources/pluggins/jquery-iu-1.8.18/development-bundle/ui/jquery.ui.core.js"></script>
+	<script src="http://mioficina.co/app-front-end/resources/pluggins/jquery-iu-1.8.18/development-bundle/ui/jquery.ui.widget.js"></script>
+	<script src="http://mioficina.co/app-front-end/resources/pluggins/jquery-iu-1.8.18/development-bundle/ui/jquery.ui.datepicker.js"></script>
+        <script src="http://mioficina.co/app-front-end/resources/pluggins/jquery-iu-1.8.18/development-bundle/ui/i18n/jquery.ui.datepicker-es.js"></script>
+        <script src="http://mioficina.co/app-front-end/resources/pluggins/alphanumeric/jquery.alphanumeric.pack.js" type="text/javascript"></script>
+        <script src="http://mioficina.co/app-front-end/resources/pluggins/validate/jquery.validate.pack.js" type="text/javascript"></script>
+        <script src="http://mioficina.co/app-front-end/resources/pluggins/accounting/accounting.js" type="text/javascript"></script>
+        <title>Mi Oficina.Co - Ingresos</title>
+        <script type="text/javascript">
+            $(function() {
+                $(".datepicker").datepicker();
+                $(".datepicker").datepicker( $.datepicker.regional[ "es" ] );
+                $(".datepicker").datepicker("option", "dateFormat", "yy-mm-dd");
+            });
+        </script>
+    </head>
+    <body>
+        
+        <div id="container-service-body">
+            
+            <div id="container-service">
+                <header id="service">
+                    <div id="titlebar">
+                        <div id="logo"><img src="http://mioficina.co/app-front-end/resources/multimedia/iconos/white/home.png" /></div>
+                        <div id="title">Gestión de Egresos</div>
+                    </div>
+                    <div id="path"><a href="#">Modulo Contable</a> >> <a href="#">Gesti&oacute;n de Egresos</a></div>
+                </header>
+                <article>
+                    <div id="content-service">
+                        <section id="info"><p></p></section>
+                        <section id="barSearchExpenditure">
+                            <section id="titleBarSearch"><p>Filtar Egresos</p></section>
+                            <section id="boxSearch">
+                                <p id="lblByDate">Por Periodo</p>
+                                <p id="lblInitDate">Desde:</p>
+                                <input class="datepicker" type="text" id="datepickerInit"/>
+                                <p id="lblFinDate">Hasta:</p>
+                                <input class="datepicker" type="text" id="datepickerFin"/>
+                                <p id="lblByConcept">Por Concepto</p>                                
+                                <select id="sltTypeConceptSearch">
+                                    <!-- list concepts -->
+                                </select>
+                                <div id="buttonSearchExpenditure"><img src="http://mioficina.co/app-front-end/resources/multimedia/iconos/blue/search.png" /></div>
+                            </section>
+                        </section>
+                        <section id="addExpenditure">
+                            <img id="buttonAddExpenditure" src="http://mioficina.co/app-front-end/resources/multimedia/iconos/blue/add-item.png" />
+                        </section>
+                        <section id="gridExpenditures">
+                            <section id="tableGridExpenditures">
+                                <section id="menuGridExpenditures">
+                                    <div style="width:50px;"><p>N&uacute;mero</p></div>
+                                    <div style="width:100px;"><p>Concepto</p></div>
+                                    <div style="width:80px;"><p>Fecha</p></div>
+                                    <div style="width:90px;"><p>Valor</p></div>
+                                    <div style="width:60px;"><p>Tipo</p></div>
+                                    <div style="width:50px;"><p>Comprobante</p></div>
+                                    <div style="width:80px;"><p>Proveedor</p></div>
+                                    <div style="width:120px;"><p>Descripci&oacute;n</p></div>
+                                </section>
+                                <section id="listItemsGrid"><!-- list users --></section>
+                            </section>
+                            <section id="pagination">
+                                <section id="list-pagination"></section>
+                            </section>
+                        </section>
+                    </div>
+                </article>
+                <footer id="footer-service">
+                    <p>Para más información contáctenos al correo soporte@mioficina.co</p>
+                </footer>
+            </div>
+        </div>
+        
+        
+        <!-- dialog add expenditure -->
+        <div class="dialog" id-dialog="dlg-addExpenditure">
+            <div id="dlgAddExpenditure">
+                <div class="titleDialog"><p>Agregar Egreso</p></div>
+                    <!-- { -->
+                    <!--<section id="infoDialogAdd"><p></p></section>-->
+                    <section id="formAddExpenditure">
+                           <div id="frm-labelsAdd">
+                                <div><p id="lblAddTypeConceptExpenditure">Concepto</p></div>
+                                <div><p id="lblAddDateExpenditure">Fecha</p></div>
+                                <div><p id="lblAddValueExpenditure">Valor</p></div>
+                                <div><p id="lblAddFormatedValueExpenditure">--</p></div>
+                                <div><p id="lblAddPayTypeExpenditure">Tipo de Pago</p></div>
+                                <div><p id="lblAddVoucheExpenditure">Comprobante</p></div>
+                                <div><p id="lblAddProviderExpenditure">Proveedor</p></div>
+                                <div><p id="lblAddDescriptionExpenditure">Descripc&oacute;n</p></div>
+                            </div>
+                            <div id="frm-fieldsAdd">
+                                <div id="addFiedlTypeConceptExpenditure"><select id="sltAddTypeConceptExpenditure"></select></div>
+                                <div id="addFiedlDateExpenditure"><input class="datepicker" type="text" value="" id="txtAddDateExpenditure" /></div>
+                                <div id="addFiedlValueExpenditure"><input type="text" value="" id="txtAddValueExpenditure" /></div>
+                                <div id="addFiedlPayTypeExpenditure">
+                                    <select id="sltAddPayTypeExpenditure">
+                                        <option value="1">Efectivo</option>
+                                        <option value="2">Banco</option>
+                                    </select>
+                                </div>
+                                <div id="addFiedlVoucherExpenditure"><input type="text" value="" id="txtAddVoucherExpenditure" /></div>
+                                <div id="addFiedlProviderExpenditure"><select id="sltAddSuppliersExpenditure"></select></div>
+                                <div id="addFiedlDescriptionExpenditure"><input type="text" value="" id="txtAddDescriptionExpenditure" /></div>
+                            </div>
+                            <div class="btnActionDilog"><div id="btn-saveAddExpenditure"><div class="content-buttonDialogs"><img src="http://mioficina.co/app-front-end/resources/multimedia/iconos/white/save.png" /><p>Agregar Egreso</p></div></div></div>
+                        </section>
+                    </section>
+                    <!-- } -->
+                <div id="btn-closeDialogAddExpenditure" class="btn-closeDialog"></div>
+            </div>
+        </div>
+        <!-- end dialog add concept -->
+        
+        
+        <!-- dialog add concept -->
+        <div class="dialog" id-dialog="dlg-editExpenditure">
+            <div id="dlgEditExpenditure">
+                <div class="titleDialog"><p>Editar Egreso</p></div>
+                    <!-- { -->
+                    <section id="infoDialogEdit"><p></p></section>
+                    <section id="formEditExpenditure">
+                           <div id="frm-labelsEdit">
+                                <div><p id="lblEditTypeConceptExpenditure">Concepto</p></div>
+                                <div><p id="lblEditDateExpenditure">Fecha</p></div>
+                                <div><p id="lblEditValueExpenditure">Valor</p></div>
+                                <div><p id="lblEditFormatedValueExpenditure">--</p></div>
+                                <div><p id="lblEditPayTypeExpenditure">Tipo de Pago</p></div>
+                                <div><p id="lblEditVoucheExpenditure">Comprobante</p></div>
+                                <div><p id="lblEditProviderExpenditure">Proveedor</p></div>
+                                <div><p id="lblEditDescriptionExpenditure">Descripc&oacute;n</p></div>
+                            </div>
+                            <div id="frm-fieldsEdit">
+                                <div id="editFiedlTypeConceptExpenditure"><select id="sltEditTypeConceptExpenditure"></select></div>
+                                <div id="editFiedlDateExpenditure"><input class="datepicker" type="text" value="" id="txtEditDateExpenditure" /></div>
+                                <div id="editFiedlValueExpenditure"><input type="text" value="" id="txtEditValueExpenditure" /></div>
+                                <div id="editFiedlPayTypeExpenditure">
+                                    <select id="sltEditPayTypeExpenditure"></select>
+                                </div>
+                                <div id="editFiedlVoucherExpenditure"><input type="text" value="" id="txtEditVoucherExpenditure" /></div>
+                                <div id="editFiedlProviderExpenditure"><select id="sltEditSuppliersExpenditure"></select></div>
+                                <div id="editFiedlDescriptionExpenditure"><input type="text" value="" id="txtEditDescriptionExpenditure" /></div>
+                            </div>
+                            <div class="btnActionDilog"><div id="btn-saveEditExpenditure"><div class="content-buttonDialogs"><img src="http://mioficina.co/app-front-end/resources/multimedia/iconos/white/save.png" /><p>Editar Ingreso</p></div></div></div>
+                        </section>
+                    </section>
+                    <!-- } -->
+                <div id="btn-closeDialogEditExpenditure" class="btn-closeDialog"></div>
+            </div>
+        </div>
+        <!-- end dialog add concept -->
+        
+        
+        <!-- dialog add office -->
+        <div class="dialog" id-dialog="dlg-deleteExpenditure">
+            <div id="dlgDeleteExpenditure">
+                <div class="titleDialog"><p>Eliminar Egreso</p></div>
+                    <section>
+                        <div id="textDeleteDialog"><p>Esta Seguro de eliminar el egreso?</p></div>
+                        <div class="btnActionDilog"><div id-button-expenditure-delete="" id="btn-deleteExpenditure"><div class="content-buttonDialogs"><img src="http://mioficina.co/app-front-end/resources/multimedia/iconos/white/delete-item.png" /><p>Eliminar Egreso</p></div></div></div>
+                    </section>
+                    <!-- } -->
+                <div id="btn-closeDialogDeteleExpenditure" class="btn-closeDialog"></div>
+            </div>
+        </div>
+        <!-- end dialog add office -->
+        
+        
+        <div class="loadingProcess" id-dialog="processing">
+            <div id="processLoadingContent">
+                <div id="imgLoadingProccess">
+                    <img src="http://mioficina.co/app-front-end/resources/multimedia/gifs/ajax-loader-blue.gif" />
+                </div>
+                <div id="lblLoadingProccess">Procesando...</div>
+            </div>
+        </div>
+            
+    </body>
+</html>

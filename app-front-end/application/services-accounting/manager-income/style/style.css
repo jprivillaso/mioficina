@@ -1,0 +1,692 @@
+/* 
+    Document   : style
+    Created on : 18/06/2012, 02:28:27 PM
+    Author     : mioficina.co
+    Description:
+        styles for manager concepts
+*/
+
+root { 
+    display: block;
+}
+
+#tableGridIncomes{
+    position: relative;
+    width: 96%;
+    left: 2%;
+    height: 400px;
+    margin-bottom: 5px;
+}
+
+#menuGridIncomes{
+    position: relative;
+    height: 34px;
+    width: 100%;
+    border-bottom: 1px solid #E2EDF2;
+}
+
+#menuGridIncomes div{
+    border-left: 1px solid #ffffff;
+    float: left;
+    height: 100%;
+    background-color: #0085B2;
+}
+
+#menuGridIncomes div p{
+    margin-top: 7px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#pagination{
+    position: relative;
+    border-top: 1px solid #0092ef;
+    height: 30px;
+    width: 96%;
+    left: 2%;
+}
+
+#pagination #list-pagination{
+    margin-left: 100px;
+}
+
+.class-pagination-on{
+    position: relative;
+    border: 1px solid #0085B2;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top:2px;
+    margin-left: 2px;
+    background: #0092ef;
+}
+.class-pagination-on p{
+    text-align: center;
+    margin-top: 2px;
+    color: #ffffff;
+}
+
+.class-pagination-off{
+    position: relative;
+    border: 1px solid #0085B2;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top:2px;
+    margin-left: 2px;
+    background: #0092ef;
+    cursor: pointer;
+}
+.class-pagination-off p{
+    text-align: center;
+    margin-top: 2px;
+    color: #ffffff;
+}
+
+.eachIncomeGrid{
+    position: relative;
+    float: none;
+    width: 100%;
+    height: 30px;
+    border: 1px solid #E2EDF2;
+}
+
+.eachIncomeGrid div{
+    border-left: 1px solid #E2EDF2;
+    float: left;
+    height: 100%;
+}
+.eachIncomeGrid div p{
+    text-align: center;
+    margin-top: 4px;
+}
+
+.eachIncomeGrid div p img{
+    margin-top: -4px;
+    cursor: pointer;
+}
+
+#info{
+    position: relative;
+    height: 30px;
+    width: 60%;
+    left: 5%;
+}
+
+#info p{
+    color: red;
+    margin-top: 10px;
+}
+
+.dialog{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 20;
+    background-color: rgba(255,255,255, 0.9);
+    top: 0px;
+    left: 0px;
+}
+
+.dialog .btn-closeDialog{
+    position: absolute;
+    cursor: pointer;
+    right: 6px;
+    bottom: 6px;
+    background: url('http://mioficina.co/app-front-end/resources/multimedia/images/controls-close.png');
+    background-position: top center;
+    width: 25px;
+    height: 25px;
+}
+
+.dialog .btn-closeDialog:hover{
+    background: url('http://mioficina.co/app-front-end/resources/multimedia/images/controls-close.png');
+    background-position: bottom center;
+}
+
+.dialog .btn-closeDialog p{
+    color: #F90;
+    font-size: 1.1em;
+}
+
+#infoDialog{
+    position: absolute;
+    top:5px;
+    height: 40px;
+    width: 90%;
+    left:5%;
+}
+
+#infoDialog p{
+    margin-top: 10px;
+    color:red;
+}
+
+
+.dialog .titleDialog{
+    position: absolute;
+    width: 90%;
+    top: 5px;
+    height: 30px;
+}
+
+.dialog .titleDialog p{
+    color: #0085B2;
+    text-align: center;
+    font-size: 1.35em;
+    font-weight: bold;
+}
+
+.btnActionDilog{
+    position: absolute;
+    width: 100%;
+}
+
+/*** bar search **/
+#barSearchIncome{
+    width: 90%;
+    height: 70px;
+    border: 1px solid #0085B2;
+    margin-left: 5%;
+    margin-bottom: 10px;
+}
+
+#titleBarSearch{
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+    background: #0085B2;
+}
+#titleBarSearch p{
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+
+#barSearchIncome #boxSearch{
+    /*border: 1px solid #0085B2;*/
+    
+}
+
+#boxSearch #lblByDate {
+    color: #0085B2;
+    left: 130px;
+    position: absolute;
+    top: 65px;
+    font-weight: bold;
+}
+#boxSearch #lblByConcept {
+    color: #0085B2;
+    left: 430px;
+    position: absolute;
+    top: 65px;
+    font-weight: bold;
+}
+#boxSearch #lblInitDate {
+    color: #0B559B;
+    left: 46px;
+    position: absolute;
+    top: 85px;
+}
+#boxSearch #lblFinDate {
+    color: #0B559B;
+    left: 200px;
+    position: absolute;
+    top: 85px;
+}
+
+#datepickerInit{
+    position: absolute;
+    left: 90px;
+    top: 83px;
+    width: 100px;
+}
+
+#datepickerFin{
+    position: absolute;
+    left: 240px;
+    top: 83px;
+    width: 100px;
+}
+
+#sltTypeConceptSearch{
+    position: absolute;
+    left: 380px;
+    top: 83px;
+    width: 250px;
+}
+
+#buttonSearchIncome{
+    position: absolute;
+    cursor: pointer;
+    top: 73px;
+    left: 670px;
+}
+
+#buttonSearchIncome img:hover{
+    opacity: 0.5;
+}
+
+/* end bar search */
+
+
+/*** bar add item **/
+#addIncome{
+    position: relative;
+    height: 30px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#addIncome img{
+    float: right;
+    cursor: pointer;
+}
+/*** bar add item **/
+
+
+/*** edit income ***/
+
+#dlgEditIncome{
+    position: absolute;
+    padding:10px;
+    background: #ffffff;
+    top: 50px;
+    left: 12%;
+    width: 76%;
+    height: 360px;
+    border: 2px solid #ccccff;
+}
+
+#formEditIncome{
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    border: 1px solid #E2EDF2;
+    top: 30px;
+}
+
+#formEditIncome #frm-labelsEdit{
+    position: absolute;
+    left: 10px;
+    width: 110px;
+    height: 330px;
+    top: 10px;
+}
+
+#formEditIncome #frm-labelsEdit p{
+    position: absolute;
+    text-align: right;
+    font-weight: bold;
+    width: 100%;
+}
+
+#lblEditTypeConceptIncome{
+    top: 25px;
+}
+#lblEditDateIncome{
+    top: 55px;
+}
+#lblEditValueIncome{
+    top: 85px;
+}
+#lblEditFormatedValueIncome{
+    top: 80px;
+    left: 280px;
+    text-align: left;
+    width: 140px;
+    border: 1px solid #8ae234;
+    height: 20px;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+#lblEditPayTypeIncome{
+    top: 115px;
+}
+#lblEditFromIncome{
+    top: 145px;
+}
+#lblEditDescriptionIncome{
+    top: 175px;
+}
+
+#editFiedlTypeConceptIncome{
+    top: 22px;
+}
+#editFiedlDateIncome{
+    top: 52px;
+}
+#editFiedlValueIncome{
+    top: 82px;
+}
+#editFiedlPayTypeIncome{
+    top: 112px;
+}
+#editFiedlFromIncome{
+    top: 142px;
+}
+#editFiedlDescriptionIncome{
+    top: 172px;
+}
+
+#formEditIncome #frm-fieldsEdit{
+    position: absolute;
+    left: 130px;
+    width: 350px;
+    height: 330px;
+    top: 10px;
+}
+
+#formEditIncome #frm-fieldsEdit div{
+    position: absolute;
+    width: 100%;
+}
+
+#formEditIncome #frm-fieldsEdit div input{
+    padding: 2px;
+}
+
+#formEditIncome #frm-fieldsEdit div select{
+    padding: 2px;
+}
+
+#formEditIncome #btn-saveEditIncome{
+    position: absolute;
+    top: 280px;
+    width: 80%;
+    left: 10%;
+    height: 30px;
+    background: #1c94c4;
+    cursor: pointer;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+#formEditIncome #btn-saveEditIncome .content-buttonDialogs{
+    position: absolute;
+    width: 50%;
+    left: 35%;
+}
+
+#formEditIncome #btn-saveEditIncome .content-buttonDialogs img{
+    float: left;
+}
+
+#formEditIncome #btn-saveEditIncome .content-buttonDialogs p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.32em;
+    font-weight: bold;
+    color: #ffffff;
+    left: 30px;
+    float: left;
+}
+
+#formEditIncome #btn-saveEditIncome:hover{
+    cursor: pointer;
+    background: #0092ef;
+}
+
+
+
+/*** dialog add concept ***/
+
+#dlgAddIncome{
+    position: absolute;
+    padding:10px;
+    background: #ffffff;
+    top: 50px;
+    left: 12%;
+    width: 76%;
+    height: 360px;
+    border: 2px solid #ccccff;
+}
+
+#infoDialogAdd{
+    position: absolute;
+    width: 90%;
+    left: 10%;
+    top: 130px;
+    height: 20px;
+}
+
+#infoDialogAdd p{
+    color: #ff3333;
+}
+
+#infoDlgAddIncome{
+    position: absolute;
+    top: 10px;
+    left: 330px;
+}
+#infoDlgAddIncome p{
+    color: #ff3333;
+}
+
+#formAddIncome #frm-labelsAdd{
+    position: absolute;
+    left: 10px;
+    width: 110px;
+    height: 330px;
+    top: 10px;
+}
+
+#formAddIncome #frm-labelsAdd p{
+    position: absolute;
+    text-align: right;
+    font-weight: bold;
+    width: 100%;
+}
+
+#formAddIncome #frm-fieldsAdd{
+    position: absolute;
+    left: 130px;
+    width: 350px;
+    height: 330px;
+    top: 10px;
+}
+
+#formAddIncome #frm-fieldsAdd div{
+    position: absolute;
+    width: 100%;
+}
+
+#formAddIncome #frm-fieldsAdd div input{
+    padding: 2px;
+}
+
+#formAddIncome #frm-fieldsAdd div select{
+    padding: 2px;
+}
+
+#lblAddTypeConceptIncome{
+    top: 25px;
+}
+#lblAddDateIncome{
+    top: 55px;
+}
+#lblAddValueIncome{
+    top: 85px;
+}
+#lblAddFormatedValueIncome{
+    top: 80px;
+    left: 280px;
+    text-align: left;
+    width: 140px;
+    border: 1px solid #8ae234;
+    height: 20px;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+#lblAddPayTypeIncome{
+    top: 115px;
+}
+#lblAddFromIncome{
+    top: 145px;
+}
+#lblAddDescriptionIncome{
+    top: 175px;
+}
+
+#addFiedlTypeConceptIncome{
+    top: 22px;
+}
+#addFiedlDateIncome{
+    top: 52px;
+}
+#addFiedlValueIncome{
+    top: 82px;
+}
+#addFiedlPayTypeIncome{
+    top: 112px;
+}
+#addFiedlFromIncome{
+    top: 142px;
+}
+#addFiedlDescriptionIncome{
+    top: 172px;
+}
+
+#btn-saveAddIncome{
+    position: absolute;
+    top: 300px;
+    width: 80%;
+    left: 10%;
+    height: 30px;
+    background: #1c94c4;
+    cursor: pointer;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+#btn-saveAddIncome .content-buttonDialogs{
+    position: absolute;
+    width: 50%;
+    left: 35%;
+}
+
+#btn-saveAddIncome .content-buttonDialogs img{
+    float: left;
+}
+
+#btn-saveAddIncome .content-buttonDialogs p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.32em;
+    font-weight: bold;
+    color: #ffffff;
+    left: 30px;
+    float: left;
+}
+
+#btn-saveAddIncome:hover{
+    cursor: pointer;
+    background: #0092ef;
+}
+
+
+/*** delete income **/
+
+/*.btn-deleteOwner{
+    cursor: pointer;
+}*/
+
+
+/*********loading **********/
+
+.loadingProcess{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 30;
+    background-color: rgba(255,255,255, 0.9);
+    top: 0px;
+    left: 0px;
+}
+
+#processLoadingContent{
+    position: relative;
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 250px;
+}
+
+#imgLoadingProccess{
+    position: relative;
+    margin: 0 auto;
+}
+
+#lblLoadingProccess{
+    position: relative;
+    margin: 0 auto;
+    color: #0085B2;
+    margin-left: 70px;
+}
+
+.ui-datepicker, .ui-state-default, .ui-state-hover, .ui-state-active{
+    font-size:11px;
+}
+
+/** dialogo delete item **/
+
+#dlgDeleteIncome{
+    position: relative;
+    margin: 0 auto;
+    width: 500px;
+    height: 130px;
+    margin-top: 220px;
+    border:  1px solid #ff3333;
+}
+
+#dlgDeleteIncome #textDeleteDialog{
+    position: absolute;
+    width: 100%;
+    margin-top: 40px;
+}
+
+#dlgDeleteIncome #textDeleteDialog p{
+    text-align: center;
+    font-weight: bold;
+}
+
+#btn-deleteIncome{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top:80px;
+    height: 30px;
+    background: #ff3333;
+    cursor: pointer;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+#btn-deleteIncome:hover{
+    background: #ff3333;
+}
+
+#btn-deleteIncome .content-buttonDialogs{
+    position: absolute;
+    width: 50%;
+    left: 35%;
+}
+
+#btn-deleteIncome .content-buttonDialogs img{
+    float: left;
+}
+
+#btn-deleteIncome .content-buttonDialogs p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.32em;
+    font-weight: bold;
+    color: #ffffff;
+    left: 30px;
+    float: left;
+}

@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ margin:0px; padding:0px;}
+img { border:0px;}
+
+body{
+    /*background: url("images/bg-lines.png") repeat scroll 0 0 #FFFFFF;*/
+    background:#FFFFFF;
+    color: #333333;
+    font-family: arial,verdana,helvetica,sans-serif;
+    font-size: 12px;
+}
+
+#page{
+	/*background: url(images/bg-whitebox-main.png) repeat-x;*/
+}
+
+#container {
+	position:relative;
+	width:960px;
+	margin: 0 auto;
+	overflow:hidden;
+}
+
+/**header **/
+header { 
+	width:100%;
+	position:relative;
+	height:130px;
+	margin-top:2px;
+}
+
+header #logo{
+	position:relative;
+	float:left;
+	width:200px;
+}
+
+header #menu{
+	position:relative;
+	float:left;
+	margin-top:20px;
+	margin-left:15px;
+}
+
+header #menu ul{ list-style:none;}
+
+header #menu ul li { font-size:1.0134em; }
+
+header #menu ul li a{ color:#F90; text-decoration:none;  }
+
+header #menu ul li a:hover{ color:#FC0; padding-left: 10px; background:url(http://siru.sysney/com/app-front-end/resources/multimedia/images/next_thumb.png) no-repeat; }
+
+
+header #login{
+	position:relative;
+	float:right;	
+}
+
+header #login img{
+	float:left;
+}
+
+header #login #my-account{
+	color:#F60;
+	background:#FFF;
+	font-size:1.124em;
+	float:left;
+	text-decoration:none;
+	margin-top:10px;
+	margin-left:3px;
+}
+
+header #login #my-account:hover{
+	color:#F90;
+}
+
+/* body content */
+#content {
+	position:relative;
+	width:99%;
+	margin:20px 2px 5px;
+	clear:both;
+	overflow:hidden;
+	border: 1px solid #E2EDF2;
+}
+
+/* footer*/
+
+#main-footer footer {
+	position:relative;
+	width:100%;
+	border-top:1px solid #E2EDF2;
+	margin-bottom:5px;
+}
+
+#main-footer p{
+	padding:10px 0px 0px 15px;
+	text-align:center;
+}

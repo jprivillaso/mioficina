@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* only content */
+
+#content { /* don't overwrite */ }
+
+
+#main-menu-modules{
+	position:relative;
+	float:left;
+	margin-left:5px;
+	margin-top:6px;
+	width:130px;
+	border-right:#E2EDF2 1px solid;
+	clear:both;
+}
+
+#main-menu-modules .module{
+	position:relative;
+	width:124px;
+	height:140px;
+	cursor:pointer;
+	background:url(http://mioficina.co/app-front-end/resources/multimedia/images/module.png) no-repeat;
+}
+
+
+#main-menu-modules .module p{
+	text-align:center;
+	padding-top:3px;
+}
+
+#main-menu-modules .module img{
+	position:relative;
+	margin-left:10px;
+	margin-top:3px;
+}
+
+article#all-content {
+	float:left;
+	width:810px;
+	margin:2px;
+}
+
+article#all-content #services-modules{
+	position:relative;
+	height:40px;
+	border-bottom: 1px solid #E2EDF2;
+}
+
+article#all-content #services-modules ul li{ text-decoration:none; display:inline; margin-left:10px; }
+article#all-content #services-modules ul li a{ color:#0092ef; text-decoration:none; padding-left: 10px; }
+article#all-content #services-modules ul li a:hover{ color:#1b75bb; background:url(http://mioficina.co/app-front-end/resources/multimedia/images/next_thumb.png) no-repeat; }
+
+
+article#all-content #main-content { 
+	position:relative;
+	margin: 5px 2px 5px;
+	/*border:1px #CCC solid;*/
+}
+
+#main-footer{
+    margin-bottom: 10px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+
+<link rel="stylesheet" type="text/css" href="uploadify.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="jquery.uploadify-3.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		var array = new Array();
+		var index = 0;
+		
+			$('#file_upload').uploadify({
+				'swf'      : 'uploadify.swf',
+				'uploader' : 'uploadify.php',
+				'cancelImg' : 'uploadify-cancel.png',
+				'fileTypeExts' : '*.gif; *.jpg; *.png; *pdf',
+				'auto'      : false,
+				'formData'  : {'folder' : 'test/src/', 'someOtherKey' : 1},
+				'width'    : 300,
+				'multi' : true,
+				'onUploadStart' : function(file) {
+          			  //alert('Starting to upload ' + file.name);
+        		},
+				'onUploadComplete' : function(file) {
+		            //alert('The file ' + file.name + ' finished processing.');
+				},
+				'onUploadError' : function(file, errorCode, errorMsg, errorString) {
+		            //alert('The file ' + file.name + ' could not be uploaded: ' + errorString);
+        		},
+				'onUploadSuccess' : function(file, data, response) {
+          			  //alert('The file ' + file.name + ' was successfully uploaded response of ' + response + ':' + data);
+					  array[index] = file.name;
+					  index++;
+        		},
+				'onQueueComplete' : function(queueData) {
+		            //alert(queueData.uploadsSuccessful + ' files were successfully uploaded.');
+					listArray();
+        		}		
+			});
+			
+			function listArray(){
+				//alert('longitud ' + array.length);
+				/*for(var i = 0; i < array.length; i++){
+					alert('name ' + array[i] );
+				}*/
+			}
+			
+			$('#button').bind('click', function(){
+				alert('subir');
+				$('#file_upload').uploadify('upload','*');
+			});
+			
+			
+			$('#open').bind('click', function(){
+				alert('open');
+			});
+		
+	});
+</script>
+</head>
+
+<body>
+
+<input type="file" name="file_upload" id="file_upload" />
+<!--<a href="javascript:$('#file_upload').uploadify('upload','*')">Upload Files</a>-->
+
+<input type="button" id="button" value="subir" />
+</body>
+</html>

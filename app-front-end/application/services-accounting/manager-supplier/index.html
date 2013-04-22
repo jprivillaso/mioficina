@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <!--<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />-->
+        <link type="text/css" rel="stylesheet" href="http://mioficina.co/app-front-end/resources/pluggins/jquery-iu-1.8.18/css/custom-theme/jquery-ui-1.8.18.custom.css" />
+        <link type="text/css" rel="stylesheet" href="http://mioficina.co/app-front-end/global/style-services.css" />
+        <link type="text/css" rel="stylesheet" href="http://mioficina.co/app-front-end/application/services-accounting/manager-supplier/style/style.css" />
+        <script src="http://mioficina.co/app-front-end/resources/pluggins/jquery-iu-1.8.18/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="http://mioficina.co/app-front-end/resources/global/global_functions.js" type="text/javascript"></script>
+        <script src="http://mioficina.co/app-front-end/application/services-accounting/manager-supplier/controller/controller.js" type="text/javascript"></script>
+        <title>Mi Oficina.Co - Proveedores</title>
+    </head>
+    <body>
+
+        <div id="container-service-body">
+
+            <div id="container-service">
+                <header id="service">
+                    <div id="titlebar">
+                        <div id="logo"><img src="http://mioficina.co/app-front-end/resources/multimedia/iconos/white/home.png" /></div>
+                        <div id="title">Gestión de Proveedores</div>
+                    </div>
+                    <div id="path"><a href="#">Modulo Contable</a> >> <a href="#">Gesti&oacute;n de Proveedores</a></div>
+                </header>
+                <article>
+                    <div id="content-service">
+                        <section id="info"><p></p></section>
+                        <!--
+                        <section id="barSearchSupplier">
+                            <section id="titleBarSearch"><p>Filtar Supplieros Por</p></section>
+                            <section id="contentSearch">
+                                <select id="sltTypeSupplier">
+                                    <option value="0">Egreso</option>
+                                    <option value="1">Ingreso</option>
+                                </select>
+                            </section>
+                        </section>
+                        -->
+                        <section id="addSupplier">
+                            <img id="buttonAddSupplier" src="http://mioficina.co/app-front-end/resources/multimedia/iconos/blue/add-item.png" />
+                        </section>
+                        <section id="gridSuppliers">
+                            <section id="tableGridSuppliers">
+                                <section id="menuGridSuppliers">
+                                    <div style="width:100px;"><p>Nombre</p></div>
+                                    <div style="width:80px;"><p>C&eacute;dula</p></div>
+                                    <div style="width:80px;"><p>Nit</p></div>
+                                    <div style="width:80px;"><p>T&eacute;lefono</p></div>
+                                    <div style="width:120px;"><p>Direcci&oacute;n</p></div>
+                                    <div style="width:140px;"><p>Email</p></div>
+                                </section>
+                                <section id="listItemsGrid"><!-- list users --></section>
+                            </section>
+                            <section id="pagination">
+                                <section id="list-pagination"></section>
+                            </section>
+                        </section>
+                    </div>
+                </article>
+                <footer id="footer-service">
+                    <p>Para más información contáctenos al correo soporte@mioficina.co</p>
+                </footer>
+            </div>
+        </div>
+
+
+        <!-- dialog add Supplier -->
+        <div class="dialog" id-dialog="dlg-addSupplier">
+            <div id="dlgAddSupplier">
+                <div class="titleDialog"><p>Agregar Proveedor</p></div>
+                <!-- { -->
+                <!--<section id="infoDialogAdd"><p></p></section>-->
+                <section id="formAddSupplier">
+                    <div id="frm-labelsAdd">
+                        <div><p id="lblAddName">Nombre</p></div>
+                        <div><p id="lblAddID">C&eacute;dula</p></div>
+                        <div><p id="lblAddNit">Nit</p></div>
+                        <div><p id="lblAddPhone">T&eacute;lefono</p></div>
+                        <div><p id="lblAddAddress">Direcci&oacute;n</p></div>
+                        <div><p id="lblAddEmail">Email</p></div>
+                    </div>
+                    <div id="frm-fieldsAdd">
+                        <div id="addFiedlName"><input type="text" value="" id="txtAddName" /></div>
+                        <div id="addFiedlID"><input type="text" value="" id="txtAddID" /></div>
+                        <div id="addFiedlNit"><input type="text" value="" id="txtAddNit" /></div>
+                        <div id="addFiedlPhone"><input type="text" value="" id="txtAddPhone" /></div>
+                        <div id="addFiedlAddress"><input type="text" value="" id="txtAddAddress" /></div>
+                        <div id="addFiedlEmail"><input type="text" value="" id="txtAddEmail" /></div>
+                    </div>
+                    <div class="btnActionDilog"><div id="btn-saveAddSupplier"><div class="content-buttonDialogs"><img src="http://mioficina.co/app-front-end/resources/multimedia/iconos/white/save.png" /><p>Agregar Suppliero</p></div></div></div>
+                </section>
+                </section>
+                <!-- } -->
+                <div id="btn-closeDialogAddSupplier" class="btn-closeDialog"></div>
+            </div>
+        </div>
+        <!-- end dialog add Supplier -->
+
+
+        <!-- dialog add Supplier -->
+        <div class="dialog" id-dialog="dlg-editSupplier">
+            <div id="dlgEditSupplier">
+                <div class="titleDialog"><p>Editar Proveedor</p></div>
+                <!-- { -->
+                <section id="infoDialogEdit"><p></p></section>
+                <section id="formEditSupplier">
+                    <div id="frm-labelsEdit">
+                        <div><p id="lblEditName">Nombre</p></div>
+                        <div><p id="lblEditID">C&eacute;dula</p></div>
+                        <div><p id="lblEditNit">Nit</p></div>
+                        <div><p id="lblEditPhone">T&eacute;lefono</p></div>
+                        <div><p id="lblEditAddress">Direcci&oacute;n</p></div>
+                        <div><p id="lblEditEmail">Email</p></div>
+                    </div>
+                    <div id="frm-fieldsEdit">
+                        <div id="editFiedlName"><input type="text" value="" id="txtEditName" /></div>
+                        <div id="editFiedlID"><input type="text" value="" id="txtEditID" /></div>
+                        <div id="editFiedlNit"><input type="text" value="" id="txtEditNit" /></div>
+                        <div id="editFiedlPhone"><input type="text" value="" id="txtEditPhone" /></div>
+                        <div id="editFiedlAddress"><input type="text" value="" id="txtEditAddress" /></div>
+                        <div id="editFiedlEmail"><input type="text" value="" id="txtEditEmail" /></div>
+                    </div>
+                    <div class="btnActionDilog"><div id="btn-saveEditSupplier"><div class="content-buttonDialogs"><img src="http://mioficina.co/app-front-end/resources/multimedia/iconos/white/save.png" /><p>Editar Proveedor</p></div></div></div>
+                </section>
+                <!-- } -->
+                <div id="btn-closeDialogEditSupplier" class="btn-closeDialog"></div>
+            </div>
+        </div>
+        <!-- end dialog add Supplier -->
+
+
+        <div class="loadingProcess" id-dialog="processing">
+            <div id="processLoadingContent">
+                <div id="imgLoadingProccess">
+                    <img src="http://mioficina.co/app-front-end/resources/multimedia/gifs/ajax-loader-blue.gif" />
+                </div>
+                <div id="lblLoadingProccess">Procesando...</div>
+            </div>
+        </div>
+
+    </body>
+</html>

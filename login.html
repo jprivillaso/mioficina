@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+        <link type="text/css" rel="stylesheet" href="app-front-end/resources/pluggins/jquery-iu-1.8.18/css/custom-theme/jquery-ui-1.8.18.custom.css" />
+        <link type="text/css" rel="stylesheet" href="css/login.css" />
+        <title>Mi Oficina .co</title>
+    </style>
+</head>
+
+<body>
+
+    <section id="logo">
+        <img src="images/logoOffice.png" />
+    </section>
+
+    <section id="content-login">
+        <!-- content -->
+        <section id="login">
+            <section class="title-bar">
+                <h1><img src="http://mioficina.co/images/blue/multi-agents.png" /><span id="my-account">Acceder A Mi Cuenta</span></h1>
+            </section>
+            <section id="form-login">
+                <form id="frm_login" name="frm_login">
+                    <fieldset>
+                        <label id="lblUser" for="userUserLogin">Email:</label>
+                        <input type="text" placeholder="Ingrese su Email" name="userUserLogin" id="userUserLogin" value="" class="text ui-widget-content ui-corner-all" maxlength="30" autofocus>
+                        <br />
+                        <label id="lblPassword" for="passwordUserLogin">Contrase&ntilde;a:</label>
+                        <input type="password" name="passwordUserLogin" id="passwordUserLogin" value="" class="text ui-widget-content ui-corner-all" maxlength="255" />
+                    </fieldset>
+                    <fieldset>
+                        <a href="#" id="link-login"><p>Ingresar</p></a>
+                    </fieldset>
+                    <!--<error></error>-->
+                </form>
+            </section>
+            <section class="error-message" id="msgForm"></section>
+            <!-- /content -->
+        </section>
+    </section>
+
+    <!-- dialog add office -->
+    <div class="dialog" id-dialog="dlg-chooseBuilding">
+        <div id="dlgChooseBuilding">
+            <div class="titleDialog"><p>Selecciona Edificio</p></div>
+            <section id="listBuildings">
+                
+            </section>
+            <div id="btn-closeDialogBulding" class="btn-closeDialog"></div>
+        </div>
+    </div>
+    <!-- end dialog add office -->
+
+    
+    <!-- dialog add office -->
+    <div class="dialog" id-dialog="dlg-chooseProfile">
+        <div id="dlgChooseProfile">
+            <div class="titleDialog"><p>Selecciona Perfil</p></div>
+            <section id="listProfiles">
+                
+            </section>
+            <div id="btn-closeDialogProfile" class="btn-closeDialog"></div>
+        </div>
+    </div>
+    <!-- end dialog add office -->
+
+    <div class="loadingProcess" id-dialog="processing">
+        <div id="processLoadingContent">
+            <div id="imgLoadingProccess">
+                <img src="http://mioficina.co/app-front-end/resources/multimedia/gifs/ajax-loader-blue.gif" />
+            </div>
+            <div id="lblLoadingProccess">Procesando...</div>
+        </div>
+    </div>
+
+</body>
+<script src="app-front-end/resources/pluggins/jquery-iu-1.8.18/js/jquery-1.7.1.min.js"></script>
+<script src="app-front-end/resources/global/global_functions.js" type="text/javascript"></script>
+<script src="app-front-end/resources/pluggins/alphanumeric/jquery.alphanumeric.pack.js" type="text/javascript"></script>
+<!--<script src="app-front-end/resources/pluggins/clearField/jquery.clearfield.packed.js" type="text/javascript"></script>-->
+<script src="app-front-end/resources/pluggins/validate/jquery.validate.pack.js" type="text/javascript"></script>
+<script src="js/functions_login.js" type="text/javascript"></script>
+</html>

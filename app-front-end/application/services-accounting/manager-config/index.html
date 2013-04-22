@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <!--<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />-->
+        <link type="text/css" rel="stylesheet" href="http://mioficina.co/app-front-end/resources/pluggins/jquery-iu-1.8.18/css/custom-theme/jquery-ui-1.8.18.custom.css" />
+        <link type="text/css" rel="stylesheet" href="http://mioficina.co/app-front-end/global/style-services.css" />
+        <link type="text/css" rel="stylesheet" href="http://mioficina.co/app-front-end/application/services-accounting/manager-config/style/style.css" />
+        <script src="http://mioficina.co/app-front-end/resources/pluggins/jquery-iu-1.8.18/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="http://mioficina.co/app-front-end/resources/global/global_functions.js" type="text/javascript"></script>
+        <script src="http://mioficina.co/app-front-end/application/services-accounting/manager-config/controller/controller.js" type="text/javascript"></script>
+        <script src="http://mioficina.co/app-front-end/resources/pluggins/alphanumeric/jquery.alphanumeric.pack.js" type="text/javascript"></script>
+        <script src="http://mioficina.co/app-front-end/resources/pluggins/accounting/accounting.js" type="text/javascript"></script>
+        <title>Mi Oficina.Co - Configuraci&oacute;n</title>
+        <script type="text/javascript">
+            $(function(){
+                $('.titleTag').bind('click', function(){
+                    var name = $(this).attr('name');
+                    $('.contentTag').hide();
+                    $('#' + name).show();
+                    $('.titleTag').removeClass('active');
+                    $(this).addClass('active');
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+
+        <div id="container-service-body">
+
+            <div id="container-service">
+                <header id="service">
+                    <div id="titlebar">
+                        <div id="logo"><img src="http://mioficina.co/app-front-end/resources/multimedia/iconos/white/home.png" /></div>
+                        <div id="title">Configuraci&oacute;n</div>
+                    </div>
+                    <div id="path"><a href="#">Modulo Contable</a> >> <a href="#">Configuraci&oacute;n</a></div>
+                </header>
+                <article>
+                    <div id="content-service">
+                        <section id="info"><p></p></section>
+                        <section id="tagsSection">
+                            <section id="titlesTags">
+                                <div name="configBuilding" class="titleTag"><p>Configuraci&oacute;n del Edificio</p></div>
+                                <div name="configEachOffice" class="titleTag"><p>Configuraci&oacute;n de cada Oficina</p></div>
+                            </section>
+                            <section id="contentTags">
+                                <section class="contentTag" id="configBuilding">
+                                    <div class="titleContentTag"><p>Valores de Configuraci&oacute;n</p></div>
+                                    <p id="infoValues"></p>
+                                    <div id="btn-editBuildingAccountant"><p>Editar</p></div>
+                                </section>
+                                <section class="contentTag" id="configEachOffice">
+                                    <!-- grid-->
+                                    <div id="buttonEditOfficesAccountant"><p>Cambiar Cuota de Administraci&oacute;n</p></div>
+                                    <section id="gridOfficesAccountant">
+                                        <section id="tableGridOfficesAccountant">
+                                            <section id="menuGridOfficesAccountant">
+                                                <div style="width:40px;"><input type="checkbox" id="chkAll" class="classChkAll" /></div>
+                                                <div style="width:80px;"><p>Oficina</p></div>
+                                                <div style="width:200px;"><p>Valor de Administraci&oacute;n</p></div>
+                                            </section>
+                                            <section id="listItemsGrid"></section>
+                                        </section>
+                                        <section id="pagination">
+                                            <section id="list-pagination"></section>
+                                        </section>
+                                    </section>
+                                    <!-- end grid-->
+                                </section>
+                            </section>
+                        </section>
+                    </div>
+                </article>
+                <footer id="footer-service">
+                    <p>Para más información contáctenos al correo soporte@mioficina.co</p>
+                </footer>
+            </div>
+        </div>
+
+
+        <!-- dialog edit building Accountant -->
+        <div class="dialog" id-dialog="dlg-editBuildingAccountant">
+            <div id="dlgEditBuildingAccountant">
+                <div class="titleDialog"><p>Editar Configuraci&oacute;n</p></div>
+                <section id="formEditBuildingAccountant">
+                    <div id="frm-labelsEditBuildingAccountant">
+                        <div><p id="lblEditInterestRate">Interes por Mora</p></div>
+                        <div><p id="lblEditPeriodsElapsed">Causaci&oacute;n de Interes</p></div>
+                    </div>
+                    <div id="frm-fieldsEditBuildingAccountant">
+                        <div id="editFiedlInterestRate"><input type="text" value="" id="txtEditInterestRate" /> %</div>
+                        <div id="editFiedlPeriodsElapsed"><input type="text" value="" id="txtEditPeriodsElapsed" /> periodo(s)</div>
+                    </div>
+                    <div class="btnActionDilog"><div id="btn-saveEditBuildingAccountant"><div class="content-buttonDialogs"><img src="http://mioficina.co/app-front-end/resources/multimedia/iconos/white/save.png" /><p>Editar Valores</p></div></div></div>
+                </section>
+                <!-- } -->
+                <div id="btn-closeDialogEditBuildingAccountant" class="btn-closeDialog"></div>
+            </div>
+        </div>
+        <!-- end dialog add concept -->
+
+
+        <!-- dialog add concept -->
+        <div class="dialog" id-dialog="dlg-editAdmonValue">
+            <div id="dlgEditAdmonValue">
+                <div class="titleDialog"><p>Editar Cuota de Administraci&oacute;n</p></div>
+                <!-- { -->
+                <section id="formEditAdmonValue">
+                    <div id="frm-labelsEdit">
+                        <div><p id="lblEditAdmonValue">Valor</p></div>
+                        <div><p id="lblEditFormatedAdmonValue">--</p></div>
+                    </div>
+                    <div id="frm-fieldsEdit">
+                        <div id="editFiedlAdmonValue"><input type="text" value="" id="txtEditAdmonValue" /></div>
+                    </div>
+                    <div class="btnActionDilog"><div id="btn-saveEditAdmonValue"><div class="content-buttonDialogs"><img src="http://mioficina.co/app-front-end/resources/multimedia/iconos/white/save.png" /><p>Editar Valor de Administraci&oacute;n</p></div></div></div>
+                </section>
+                <!-- } -->
+                <div id="btn-closeDialogEditAdmonValue" class="btn-closeDialog"></div>
+            </div>
+        </div>
+        <!-- end dialog add concept -->
+
+
+        <div class="loadingProcess" id-dialog="processing">
+            <div id="processLoadingContent">
+                <div id="imgLoadingProccess">
+                    <img src="http://mioficina.co/app-front-end/resources/multimedia/gifs/ajax-loader-blue.gif" />
+                </div>
+                <div id="lblLoadingProccess">Procesando...</div>
+            </div>
+        </div>
+
+    </body>
+</html>

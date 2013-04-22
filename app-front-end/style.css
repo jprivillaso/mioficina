@@ -1,0 +1,187 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ margin:0px; padding:0px;}
+img { border:0px;}
+
+body{
+	background: url("http://mioficina.co/images/bg-lines.png") repeat scroll 0 0 #FFFFFF;
+    color: #333333;
+    font-family: arial,verdana,helvetica,sans-serif;
+    font-size: 12px;
+}
+
+#page{
+	background: url(http://mioficina.co/images/bg-whitebox-main.png) repeat-x;
+}
+
+#container {
+	position:relative;
+	width:960px;
+	margin:0 auto;
+	overflow:hidden;
+	top:40px;
+}
+
+#bar{
+	width:100%;
+	position:fixed;
+	height:25px;
+	background:#FC0;
+	padding:2px;
+	background:url(http://mioficina.co/app-front-end/resources/multimedia/images/bar-bg.png) top repeat-x;
+	z-index:30;
+}
+
+#bar #info-bar{
+	width:960px;
+	margin: 0 auto;
+	color:#FFF;
+}
+
+#bar #info-bar img{
+	float:left;
+	margin-top:6px;
+	margin-right:20px;
+}
+
+#bar #info-bar p{
+	padding-top:3px;
+	margin-left:10px;
+	font-size:1.12em;
+	font-weight:bold;
+}
+
+/**header **/
+header { 
+	position:relative;
+	width:100%;
+	height:350px;
+	top:40px;
+	border-top:1px solid #E2EDF2;
+	margin-bottom:40px;
+}
+
+header #logo{
+	position:relative;
+	width:900px;
+	margin: 0 auto;
+	margin-top:20px;
+}
+
+
+/* body content */
+#content {
+	position:relative;
+	clear:both;
+}
+
+/** header **/
+#content #header_content{
+	position:relative;
+	z-index:20;
+}
+
+/** login **/
+#content #login{
+	position:relative;
+	width:320px;
+	height:auto;
+	float:right;	
+	margin: 0 auto;
+	border: solid #E2EDF2 1px;
+	background-color:#FFF;
+	margin-top:3px;
+	margin-bottom:30px;
+	padding-bottom:15px;
+	clear:both;
+	z-index:31;
+}
+
+/** /login **/
+#content #login .title-bar {
+	position: relative;
+    background: -moz-linear-gradient(center top , #FFFFFF 0%, #EDF4F8 95%) repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #E2EDF2;
+    height: 39px;
+	clear:both;
+}
+
+#content #login .title-bar h1 {
+    position:relative;
+    line-height: 41px;
+    text-indent: 19px;
+	margin-left:10px;
+}
+
+#content #login .title-bar img{
+	float:left;
+}
+
+#content #login .title-bar #my-account{
+	color:#F60;
+	font-size:1.124em;
+	float:left;
+	text-decoration:none;
+}
+
+#content #login #form-login{
+	position:relative;
+	float:left;
+	margin-top:5px;
+	width:99%;
+	overflow:hidden;
+}
+
+#content #login #form-login a#link-login{ 
+	position:relative;
+	background:url(http://mioficina.co/images/register-front.png) no-repeat;
+	color:#FFF; 
+	font-size:1.434em; 
+	text-decoration:none; 
+	width:220px;
+	margin-left: 50px;
+	padding:10px 95px 10px;
+	text-align:center;
+	font-weight:bold;
+}
+
+#content #login #form-login a:hover#link-login { background:url(http://mioficina.co/images/register-back.png) no-repeat; }
+
+
+#content #header-content{
+	position:relative;
+	width:100%;
+	height:25px;
+	margin-top:5px;
+	background:url(http://mioficina.co/app-front-end/resources/multimedia/images/bar-bg.png) top repeat-x;
+	padding-top:8px;
+	padding-left:10px;
+	clear:both;
+}
+
+#content #body-content{
+	position:relative;
+	margin-top:3px;
+	float:left;
+	width:610px;
+	background:#FFF;
+	border: 1px solid #EBEBEB;
+	padding:10px;
+}
+
+
+/* footer*/
+
+footer{
+	position:relative;
+	border-top:1px solid #E2EDF2;
+	margin:0 auto;
+	clear:both;
+}
+
+footer p{
+	padding:10px 0px 0px 15px;
+	text-align:center;
+	margin-bottom:10px;
+}

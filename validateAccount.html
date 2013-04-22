@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcuticon" href="images/favicon.png" type="image/x-icon" />
+<link type="text/css" rel="stylesheet" href="app-front-end/resources/pluggins/jquery-iu-1.8.18/css/custom-theme/jquery-ui-1.8.18.custom.css" />
+<link type="text/css" rel="stylesheet" href="style.css" />
+<title>Mi Unidad .Com</title>
+<style type="text/css">
+	#checkAccount{ padding:40px;}
+	#checkAccount a{ color:#F60; text-decoration:none; }
+</style>
+</head>
+
+<body>
+	<div id="page">
+    	<div id="contaniner">
+            <!-- content -->
+                <section id="checkAccount">
+                    
+                </section>
+            <!-- /content -->
+    	</div>
+    </div>
+</body>
+<script src="app-front-end/resources/pluggins/jquery-iu-1.8.18/js/jquery-1.7.1.min.js"></script>
+<script src="app-front-end/resources/global/global_functions.js" type="text/javascript"></script>
+<script src="js/validate_account.js" type="text/javascript"></script>
+<script src="app-front-end/resources/pluggins/geturlparam/jquery.getUrlParam.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function(){
+		$(function(){
+			var userUser = $(document).getUrlParam("user");
+			var nickUnit = $(document).getUrlParam("unit");
+			var key = $(document).getUrlParam("key");
+			checkAccount(userUser, nickUnit, key);
+		});
+		
+	});
+</script>
+</html>
